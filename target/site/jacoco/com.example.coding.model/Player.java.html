@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Player.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">coding</a> &gt; <a href="index.source.html" class="el_package">com.example.coding.model</a> &gt; <span class="el_source">Player.java</span></div><h1>Player.java</h1><pre class="source lang-java linenums">//package com.game.src.main;
+package com.example.coding.model;
+import java.awt.Graphics;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.coding.service.impl.FightGameServiceImpl;
+
+public class Player {
+	
+ //private FightGameServiceImpl game; 
+ private double x;
+ private double y;
+ 
+<span class="nc" id="L15"> private boolean hasChosen = false;</span>
+ 
+ private boolean jumping;
+<span class="nc" id="L18"> private boolean attacking = false;</span>
+ 
+<span class="nc" id="L20"> private double velX = 0;</span>
+<span class="nc" id="L21"> private double velY = 0;</span>
+ 
+<span class="nc" id="L23"> public int facing = 1;//right</span>
+<span class="nc" id="L24"> public boolean punch = false;</span>
+<span class="nc" id="L25"> public boolean kick = false;</span>
+<span class="nc" id="L26"> public boolean special = false; </span>
+<span class="nc" id="L27"> public boolean strafe = false;</span>
+<span class="nc" id="L28"> public boolean inAction = false;</span>
+ 
+<span class="nc" id="L30"> Texture tex = FightGameServiceImpl.getInstance();</span>
+ 
+ private Animation playerWalk, playerWalkLeft, playerJump, playerJumpLeft, playerStillLeft, playerStill; //movements
+ private Animation playerPunch, playerPunchLeft, playerKick, playerKickLeft, playerSpecial, playerSpecialLeft; //attacks
+ 
+<span class="nc" id="L35"> public Player(double x, double y) {</span>
+<span class="nc" id="L36">  this.x = x;</span>
+<span class="nc" id="L37">  this.y = y;</span>
+<span class="nc bnc" id="L38" title="All 2 branches missed.">  if (!hasChosen){</span>
+<span class="nc bnc" id="L39" title="All 2 branches missed.">  if (FightGameServiceImpl.ChoiceP1 == FightGameServiceImpl.CHOICEP1.SAADP1) {</span>
+<span class="nc" id="L40">      System.out.println(&quot;Player 1 has chosen Saad&quot;); </span>
+<span class="nc" id="L41">      playerWalk = new Animation(</span>
+     5, tex.saad[0], tex.saad[1], tex.saad[2], tex.saad[3], tex.saad[4], tex.saad[5], tex.saad[6]
+       );
+<span class="nc" id="L44">   playerWalkLeft = new Animation(</span>
+     5,tex.saad[7], tex.saad[8], tex.saad[9], tex.saad[10], tex.saad[11], tex.saad[12]
+       );
+<span class="nc" id="L47">   playerJump = new Animation(</span>
+     15, tex.saad_jump[0], tex.saad_jump[1], tex.saad_jump[2], tex.saad_jump[3], tex.saad_jump[4], tex.saad_jump[4], tex.saad_jump[4], tex.saad_jump[4], tex.saad_jump[5],
+     tex.saad_jump[6], tex.saad_jump[7], tex.saad_jump[8]  
+     );
+<span class="nc" id="L51">   playerJumpLeft = new Animation(</span>
+     15, tex.saad_jump[9], tex.saad_jump[10], tex.saad_jump[11], tex.saad_jump[12], tex.saad_jump[12], tex.saad_jump[12], tex.saad_jump[12], tex.saad_jump[13],
+     tex.saad_jump[14], tex.saad_jump[15], tex.saad_jump[16], tex.saad_jump[17]
+       );
+<span class="nc" id="L55">   playerStillLeft = new Animation (1, tex.saad[0]);</span>
+<span class="nc" id="L56">   playerStill = new Animation (1, tex.saad[7]);</span>
+   
+<span class="nc" id="L58">   playerPunch = new Animation (</span>
+     3, tex.saad_punch[0], tex.saad_punch[1], tex.saad_punch[2], tex.saad_punch[3], tex.saad_punch[4], tex.saad_punch[5], tex.saad_punch[6], tex.saad_punch[7],
+     tex.saad_punch[8]
+     );
+<span class="nc" id="L62">   playerPunchLeft = new Animation (</span>
+     3, tex.saad_punch[9], tex.saad_punch[10], tex.saad_punch[11], tex.saad_punch[12], tex.saad_punch[13], tex.saad_punch[14], tex.saad_punch[15], tex.saad_punch[16],
+      tex.saad_punch[17]
+     );
+<span class="nc" id="L66">   playerKick = new Animation (</span>
+     3, tex.saad_kick[0], tex.saad_kick[1], tex.saad_kick[2], tex.saad_kick[3], tex.saad_kick[4], tex.saad_kick[5], tex.saad_kick[6], tex.saad_kick[7], tex.saad_kick[8]
+     );
+<span class="nc" id="L69">   playerKickLeft = new Animation (</span>
+     3, tex.saad_kick[9], tex.saad_kick[10], tex.saad_kick[11], tex.saad_kick[12], tex.saad_kick[13], tex.saad_kick[14], tex.saad_kick[15], tex.saad_kick[16], 
+     tex.saad_kick[17]
+     );
+<span class="nc" id="L73">   playerSpecial = new Animation (</span>
+     7, tex.saad_special[0], tex.saad_special[1], tex.saad_special[2], tex.saad_special[3], tex.saad_special[4], tex.saad_special[5], tex.saad_special[6],
+     tex.saad_special[7], tex.saad_special[8]
+     );
+<span class="nc" id="L77">   playerSpecialLeft= new Animation (</span>
+     7, tex.saad_special[9], tex.saad_special[10], tex.saad_special[11], tex.saad_special[12], tex.saad_special[13], tex.saad_special[14], tex.saad_special[15],
+     tex.saad_special[16], tex.saad_special[17]
+     ); 
+  }
+<span class="nc bnc" id="L82" title="All 2 branches missed.">  else if (FightGameServiceImpl.ChoiceP1 == FightGameServiceImpl.CHOICEP1.BONDP1) {</span>
+<span class="nc" id="L83">   System.out.println(&quot;Player 1 has chosen Bond&quot;);</span>
+<span class="nc" id="L84">   playerWalk = new Animation(</span>
+     5, tex.bond[0], tex.bond[1], tex.bond[2], tex.bond[3], tex.bond[4], tex.bond[5], tex.bond[6], tex.bond[7]
+       );
+<span class="nc" id="L87">   playerWalkLeft = new Animation(</span>
+     5,tex.bond[8], tex.bond[9], tex.bond[10], tex.bond[11], tex.bond[12], tex.bond[13], tex.bond[14], tex.bond[15]
+       );
+<span class="nc" id="L90">   playerJump = new Animation(</span>
+     15, tex.bond_jump[0], tex.bond_jump[1], tex.bond_jump[2], tex.bond_jump[3], tex.bond_jump[4], tex.bond_jump[4], tex.bond_jump[4], 
+     tex.bond_jump[4], tex.bond_jump[5], tex.bond_jump[6]
+       );
+<span class="nc" id="L94">   playerJumpLeft = new Animation(</span>
+     15, tex.bond_jump[7], tex.bond_jump[8], tex.bond_jump[9], tex.bond_jump[10], tex.bond_jump[11], tex.bond_jump[12], tex.bond_jump[13]
+       ); 
+<span class="nc" id="L97">   playerStillLeft = new Animation (1, tex.bond[0]);</span>
+<span class="nc" id="L98">   playerStill = new Animation (1, tex.bond[8]);</span>
+   
+<span class="nc" id="L100">   playerPunch = new Animation (</span>
+     3, tex.bond_punch[0], tex.bond_punch[1], tex.bond_punch[2], tex.bond_punch[3], tex.bond_punch[4], tex.bond_punch[5], 
+     tex.bond_punch[6], tex.bond_punch[7]
+       );
+<span class="nc" id="L104">   playerPunchLeft = new Animation (</span>
+     3, tex.bond_punch[8], tex.bond_punch[9], tex.bond_punch[10], tex.bond_punch[11], tex.bond_punch[12], tex.bond_punch[13], 
+     tex.bond_punch[14], tex.bond_punch[15]
+     );
+<span class="nc" id="L108">   playerKick = new Animation (</span>
+     3, tex.bond_kick[0], tex.bond_kick[1], tex.bond_kick[2], tex.bond_kick[3], tex.bond_kick[4], tex.bond_kick[5], tex.bond_kick[6]
+     );
+<span class="nc" id="L111">   playerKickLeft = new Animation (</span>
+     3, tex.bond_kick[7], tex.bond_kick[8], tex.bond_kick[9], tex.bond_kick[10], tex.bond_kick[11], tex.bond_kick[12]
+     );
+<span class="nc" id="L114">   playerSpecial = new Animation (</span>
+     7, tex.bond_special[0], tex.bond_special[1] , tex.bond_special[2] , tex.bond_special[3] , tex.bond_special[4] , 
+     tex.bond_special[5] , tex.bond_special[6] , tex.bond_special[7]  
+     );
+<span class="nc" id="L118">   playerSpecialLeft= new Animation (</span>
+     7, tex.bond_special[8], tex.bond_special[9], tex.bond_special[10], tex.bond_special[11], tex.bond_special[12],
+     tex.bond_special[13], tex.bond_special[14], tex.bond_special[15]
+     );
+   
+  }
+<span class="nc" id="L124">  hasChosen = true;</span>
+ }
+ 
+  
+
+  
+<span class="nc" id="L130"> }</span>
+ 
+ public void init(){
+  
+ 
+<span class="nc" id="L135">  }</span>
+  
+ 
+ 
+ public void tick(){
+<span class="nc" id="L140">  x+= velX;</span>
+<span class="nc" id="L141">  y+= velY;</span>
+<span class="nc bnc" id="L142" title="All 2 branches missed.">  if (y &lt;= 340) {</span>
+<span class="nc" id="L143">   velY ++;</span>
+<span class="nc" id="L144">   jumping= true;</span>
+  }
+<span class="nc bnc" id="L146" title="All 2 branches missed.">  if (x &lt;= 0) {x=0;}</span>
+<span class="nc bnc" id="L147" title="All 2 branches missed.">  if (x &gt;= 725) {x=725;}</span>
+<span class="nc bnc" id="L148" title="All 2 branches missed.">  if (y &gt;= 400) {</span>
+<span class="nc" id="L149">   y=400;</span>
+<span class="nc" id="L150">   jumping = false;</span>
+  }
+<span class="nc bnc" id="L152" title="All 2 branches missed.">  if (y &lt;= 0) {y=0;}</span>
+  
+<span class="nc bnc" id="L154" title="All 2 branches missed.">  if (velX &lt;0){</span>
+<span class="nc" id="L155">   facing = 0;</span>
+  }
+<span class="nc bnc" id="L157" title="All 2 branches missed.">  else if (velX &gt; 0){facing = 1;}</span>
+  
+<span class="nc" id="L159">  playerWalk.runAnimation();</span>
+<span class="nc" id="L160">  playerWalkLeft.runAnimation();</span>
+<span class="nc" id="L161">  playerJump.runAnimation();</span>
+<span class="nc" id="L162">  playerJumpLeft.runAnimation();</span>
+<span class="nc" id="L163">  playerStill.runAnimation();</span>
+<span class="nc" id="L164">  playerStillLeft.runAnimation();</span>
+<span class="nc" id="L165">  playerPunch.runAnimation();</span>
+<span class="nc" id="L166">  playerPunchLeft.runAnimation();</span>
+<span class="nc" id="L167">  playerKick.runAnimation();</span>
+<span class="nc" id="L168">  playerKickLeft.runAnimation();</span>
+<span class="nc" id="L169">  playerSpecial.runAnimation();</span>
+<span class="nc" id="L170">  playerSpecialLeft.runAnimation();</span>
+  
+<span class="nc" id="L172"> }</span>
+ 
+ public void render(Graphics g){
+  
+<span class="nc bnc" id="L176" title="All 4 branches missed.">  if (jumping &amp;&amp; facing == 1) {</span>
+<span class="nc" id="L177">   playerJump.drawAnimation(g, (int)x, (int)y);  </span>
+  }
+
+<span class="nc bnc" id="L180" title="All 4 branches missed.">  else if (jumping &amp;&amp; facing == 0) {</span>
+<span class="nc" id="L181">   playerJumpLeft.drawAnimation(g, (int)x, (int)y);</span>
+  }
+<span class="nc bnc" id="L183" title="All 6 branches missed.">  else if (jumping &amp;&amp; facing == 1 &amp;&amp; special) {</span>
+<span class="nc" id="L184">   playerSpecial.drawAnimation(g, (int)x, (int)y);</span>
+  }
+<span class="nc bnc" id="L186" title="All 6 branches missed.">  else if (jumping &amp;&amp; facing == 0 &amp;&amp; special) {</span>
+<span class="nc" id="L187">   playerSpecialLeft.drawAnimation(g, (int)x, (int)y);</span>
+  }
+  else {
+<span class="nc bnc" id="L190" title="All 4 branches missed.">   if (!inAction &amp;&amp; velX &lt; 0){ //left</span>
+<span class="nc" id="L191">    playerWalkLeft.drawAnimation(g, (int)x, (int)y);</span>
+   }
+<span class="nc bnc" id="L193" title="All 4 branches missed.">   else if (!inAction &amp;&amp; velX &gt; 0){</span>
+<span class="nc" id="L194">    playerWalk.drawAnimation(g, (int)x, (int)y);</span>
+   }
+<span class="nc bnc" id="L196" title="All 4 branches missed.">   else if (kick &amp;&amp; facing == 1){</span>
+<span class="nc" id="L197">    playerKick.drawAnimation(g, (int)x, (int)y);</span>
+   }
+<span class="nc bnc" id="L199" title="All 4 branches missed.">   else if (kick &amp;&amp; facing == 0){</span>
+<span class="nc" id="L200">    playerKickLeft.drawAnimation(g, (int)x, (int)y);</span>
+   }
+<span class="nc bnc" id="L202" title="All 4 branches missed.">   else if (punch &amp;&amp; facing == 1){</span>
+<span class="nc" id="L203">    playerPunch.drawAnimation(g, (int)x, (int)y);</span>
+   }
+<span class="nc bnc" id="L205" title="All 4 branches missed.">   else if (punch &amp;&amp; facing == 0){</span>
+<span class="nc" id="L206">    playerPunchLeft.drawAnimation(g, (int)x, (int)y);</span>
+   }
+<span class="nc bnc" id="L208" title="All 4 branches missed.">   else if (special &amp;&amp; facing == 1){</span>
+<span class="nc" id="L209">    playerSpecial.drawAnimation(g, (int)x, (int)y);</span>
+   }
+<span class="nc bnc" id="L211" title="All 4 branches missed.">   else if (special &amp;&amp; facing == 0){</span>
+<span class="nc" id="L212">    playerSpecialLeft.drawAnimation(g, (int)x, (int)y);</span>
+   }
+   else {
+<span class="nc bnc" id="L215" title="All 2 branches missed.">    if (facing == 0) {</span>
+<span class="nc" id="L216">     playerStill.drawAnimation(g, (int)x, (int)y);</span>
+    }
+<span class="nc bnc" id="L218" title="All 2 branches missed.">    else if (facing == 1){</span>
+<span class="nc" id="L219">     playerStillLeft.drawAnimation(g, (int)x, (int)y);</span>
+    }
+   }
+  }
+<span class="nc" id="L223"> }</span>
+ 
+ public double getX(){
+<span class="nc" id="L226">  return x;</span>
+ }
+ public double getY(){
+<span class="nc" id="L229">  return y;</span>
+ }
+ public boolean isJumping(){
+<span class="nc" id="L232">  return jumping;</span>
+ }
+ public void setX(double x){
+<span class="nc" id="L235">  this.x = x;</span>
+<span class="nc" id="L236"> }</span>
+ public void setY(double y){
+<span class="nc" id="L238">  this.y = y;</span>
+<span class="nc" id="L239"> }</span>
+ public void setVelX(double velX){
+<span class="nc" id="L241">  this.velX = velX;</span>
+<span class="nc" id="L242"> }</span>
+ public void setVelY(double velY){
+<span class="nc" id="L244">  this.velY = velY;</span>
+<span class="nc" id="L245"> }</span>
+ 
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.0.201801022044</span></div></body></html>

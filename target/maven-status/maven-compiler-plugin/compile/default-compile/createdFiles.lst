@@ -1,0 +1,17 @@
+com\example\coding\controller\FightGameController.class
+com\example\coding\model\CharSel1.class
+com\example\coding\model\Game.class
+com\example\coding\model\SpriteSheet.class
+com\example\coding\service\impl\FightGameServiceImpl$CHOICEP1.class
+com\example\coding\model\BufferedImageLoader.class
+com\example\coding\model\MouseInput.class
+com\example\coding\model\Player2.class
+com\example\coding\service\impl\FightGameServiceImpl.class
+com\example\coding\model\Texture.class
+com\example\coding\model\Player.class
+com\example\coding\model\KeyInput.class
+com\example\coding\service\FightGameService.class
+com\example\coding\service\impl\FightGameServiceImpl$CHOICEP2.class
+com\example\coding\service\impl\FightGameServiceImpl$STATE.class
+com\example\coding\main\Application.class
+com\example\coding\model\Animation.class

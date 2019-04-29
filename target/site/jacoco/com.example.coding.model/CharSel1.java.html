@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CharSel1.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">coding</a> &gt; <a href="index.source.html" class="el_package">com.example.coding.model</a> &gt; <span class="el_source">CharSel1.java</span></div><h1>CharSel1.java</h1><pre class="source lang-java linenums">package com.example.coding.model;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Rectangle;
+
+import com.example.coding.service.impl.FightGameServiceImpl;
+
+<span class="nc" id="L10">public class CharSel1 {</span>
+  
+<span class="nc" id="L12"> public Rectangle backButton = new Rectangle (22, 535, 67, 42);</span>
+<span class="nc" id="L13"> public Rectangle saadButton= new Rectangle (244, 24, 379-244, 270-24);</span>
+<span class="nc" id="L14"> public Rectangle bondButton= new Rectangle (410, 24, 379-244, 270-24);</span>
+ 
+ public void render (Graphics g) {
+<span class="nc" id="L17">  Graphics2D g2d = (Graphics2D) g;</span>
+<span class="nc" id="L18">  g2d.draw(backButton);</span>
+<span class="nc" id="L19">  g2d.draw(saadButton);</span>
+<span class="nc" id="L20">  g2d.draw(bondButton);</span>
+  
+<span class="nc bnc" id="L22" title="All 2 branches missed.">  if (FightGameServiceImpl.State == FightGameServiceImpl.STATE.CHARSEL1){</span>
+<span class="nc" id="L23">   g.setFont(new Font (&quot;Arial&quot;, Font.BOLD,20));</span>
+<span class="nc" id="L24">   g.setColor(Color.white);</span>
+<span class="nc" id="L25">   g.drawString(&quot;Player 1 select.&quot;, 320, 340);</span>
+  }
+<span class="nc bnc" id="L27" title="All 2 branches missed.">  else if (FightGameServiceImpl.State == FightGameServiceImpl.STATE.CHARSEL2){</span>
+<span class="nc" id="L28">   g.setFont(new Font (&quot;Arial&quot;, Font.BOLD,20));</span>
+<span class="nc" id="L29">   g.setColor(Color.white);</span>
+<span class="nc" id="L30">   g.drawString(&quot;Player 2 select.&quot;, 320, 340);</span>
+  }
+  
+  
+<span class="nc" id="L34"> }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.0.201801022044</span></div></body></html>
