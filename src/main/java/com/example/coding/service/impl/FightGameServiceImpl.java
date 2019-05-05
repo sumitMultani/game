@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.coding.model.Player;
 import com.example.coding.service.FightGameService;
+import com.example.coding.util.CommonUtil;
 import com.example.coding.util.IConstants;
 import com.example.coding.util.ReadWrite;
 
@@ -41,17 +42,9 @@ public class FightGameServiceImpl implements FightGameService {
 
 		p1 = new Player(p1Name, 100, 1000l, 5l, 0l, 0l, p2Name, 100, 1000l, 5l,
 				0l, 0l);
-		// System.out.println(p1);
-		System.out
-				.println("=======================START FIGHT===============================");
-		System.out.println("***********************  "
-				+ p1.getpName().toUpperCase() + " vs "
-				+ p1.geteName().toUpperCase() + "  ******************");
-		System.out
-				.println("==================================================================");
+		CommonUtil.printPlayerName(p1);
 		System.out.println(p1);
 		boolean isPlay = true;
-		// repeat action
 		while (isPlay) {
 			isPlay = performActions(scan, p1, isPlay);
 		}
