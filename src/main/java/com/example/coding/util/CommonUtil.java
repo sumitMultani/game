@@ -45,8 +45,8 @@ public class CommonUtil {
 	}
 	
 	public void printActions(Player p1) {
-		System.out.println("Points :");
 		printDashLine();
+		System.out.println("Points :");
 		System.out
 				.println("[Punch = -5, Kick = -10, Explore = Buy Products, Energy = +50]");
 		printDashLine();
@@ -85,6 +85,7 @@ public class CommonUtil {
 	public boolean decideWinnerAndContinue(Player playerData, boolean isPlay) {
 
 		if (playerData.getpHealth() <= 0 || playerData.geteHealth() <= 0) {
+			printDashLine();
 			if (playerData.geteHealth() < playerData.getpHealth()) {
 				System.out.println(playerData.getpName().toUpperCase()
 						+ " IS WINNER.");
@@ -97,10 +98,12 @@ public class CommonUtil {
 				playerData.seteGold(playerData.geteGold() + IConstants.Bonus.GOLD);
 			}
 			System.out.println("GAME FINISHED.");
+			printDashLine();
 			System.out.println("Do you want to Continue The Game? ");
 			System.out.println("1. YES");
 			System.out.println("2. NO");
 			int value = scan.nextInt();
+			System.out.println("(Select 1 or 2)");
 			if (value == 1) {
 				while (isPlay) {
 					if (playerData.geteHealth() <= 0) {

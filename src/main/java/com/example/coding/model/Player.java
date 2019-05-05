@@ -181,10 +181,11 @@ public class Player implements Serializable {
 
 	@Override
 	public String toString() {
+		System.out.println("-----------------------------------------------------");
 		return "Players Detail: \n 1.Name P1 : " + pName + ", Health P1 : "
 				+ pHealth + ", Gold P1 : " + pGold + ", EnergyDrink P1 : "
 				+ pEnergyDrink + ", ShortGun P1 : " + pShortGun
-				+ ", BigGun P2 : " + pBigGun + " \n 2.Name P2 : " + eName
+				+ ", BigGun P1 : " + pBigGun + " \n 2.Name P2 : " + eName
 				+ ", Health P2 : " + eHealth + ", Gold P2 : " + eGold
 				+ ", EnergyDrink P2 : " + eEnergyDrink + ", ShortGun P2 : "
 				+ eShortGun + ", BigGun P2 : " + eBigGun;

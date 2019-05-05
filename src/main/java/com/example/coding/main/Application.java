@@ -2,7 +2,6 @@ package com.example.coding.main;
 
 import java.util.Scanner;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -21,8 +20,7 @@ import com.example.coding.util.CommonUtil;
 @EnableScheduling
 public class Application {
 
-	@Autowired
-	private static CommonUtil commonUtil;
+	private static CommonUtil commonUtil = new CommonUtil();
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = new SpringApplicationBuilder(
@@ -31,7 +29,7 @@ public class Application {
 		commonUtil.printTitle();
 		Scanner scan = new Scanner(System.in);
 		int startPoint = scan.nextInt();
-		game.startGame(startPoint);
+		System.out.println(game.startGame(startPoint));
 	}
 
 }
