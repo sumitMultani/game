@@ -7,182 +7,186 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
 @JsonInclude(Include.NON_NULL)
 @JsonSerialize
-public class Player implements Serializable{
- 
-    private static final long serialVersionUID = -5755629173293747602L;
+public class Player implements Serializable {
 
-    @JsonProperty("pName")
-    private String pName;
-    
-    @JsonProperty("pHealth")
-    private Integer pHealth;
-    
-    @JsonProperty("pGold")
-    private Long pGold;
-    
-    @JsonProperty("pEnergyDrink")
-    private Long pEnergyDrink;
-    
-    @JsonProperty("pShortGun")
-    private Long pShortGun;
-    
-    @JsonProperty("pBigGun")
-    private Long pBigGun;
-    
-    @JsonProperty("eName")
-    private String eName;
-    
-    @JsonProperty("eHealth")
-    private Integer eHealth;
-    
-    @JsonProperty("eGold")
-    private Long eGold;
-    
-    @JsonProperty("eEnergyDrink")
-    private Long eEnergyDrink;
-    
-    @JsonProperty("eShortGun")
-    private Long eShortGun;
-    
-    @JsonProperty("eBigGun")
-    private Long eBigGun;
-    
-    @JsonProperty("gameName")
-    private String gameName;
+	private static final long serialVersionUID = -5755629173293747602L;
 
-    public String getGameName() {
-        return gameName;
-    }
+	@JsonProperty("pName")
+	private String pName;
 
-    public void setGameName(String gameName) {
-        this.gameName = gameName;
-    }
+	@JsonProperty("pHealth")
+	private Integer pHealth;
 
-    public Player() {
+	@JsonProperty("pGold")
+	private Long pGold;
 
-    }
-    
-    public Player(String pName, Integer pHealth, Long pGold, Long pEnergyDrink,
-            Long pShortGun, Long pBigGun, String eName, Integer eHealth,
-            Long eGold, Long eEnergyDrink, Long eShortGun, Long eBigGun) {
-        this.pName = pName;
-        this.pHealth = pHealth;
-        this.pGold = pGold;
-        this.pEnergyDrink = pEnergyDrink;
-        this.pShortGun = pShortGun;
-        this.pBigGun = pBigGun;
-        this.eName = eName;
-        this.eHealth = eHealth;
-        this.eGold = eGold;
-        this.eEnergyDrink = eEnergyDrink;
-        this.eShortGun = eShortGun;
-        this.eBigGun = eBigGun;
-    }
+	@JsonProperty("pEnergyDrink")
+	private Integer pEnergyDrink;
 
+	@JsonProperty("pShortGun")
+	private byte pShortGun;
 
-    public Long getpEnergyDrink() {
-        return pEnergyDrink;
-    }
+	@JsonProperty("pBigGun")
+	private byte pBigGun;
 
-    public void setpEnergyDrink(Long pEnergyDrink) {
-        this.pEnergyDrink = pEnergyDrink;
-    }
+	@JsonProperty("eName")
+	private String eName;
 
-    public Long getpShortGun() {
-        return pShortGun;
-    }
+	@JsonProperty("eHealth")
+	private Integer eHealth;
 
-    public void setpShortGun(Long pShortGun) {
-        this.pShortGun = pShortGun;
-    }
+	@JsonProperty("eGold")
+	private Long eGold;
 
-    public Long getpBigGun() {
-        return pBigGun;
-    }
+	@JsonProperty("eEnergyDrink")
+	private Integer eEnergyDrink;
 
-    public void setpBigGun(Long pBigGun) {
-        this.pBigGun = pBigGun;
-    }
+	@JsonProperty("eShortGun")
+	private byte eShortGun;
 
-    public Long geteEnergyDrink() {
-        return eEnergyDrink;
-    }
+	@JsonProperty("eBigGun")
+	private byte eBigGun;
 
-    public void seteEnergyDrink(Long eEnergyDrink) {
-        this.eEnergyDrink = eEnergyDrink;
-    }
+	@JsonProperty("gameName")
+	private String gameName;
 
-    public Long geteShortGun() {
-        return eShortGun;
-    }
+	public String getGameName() {
+		return gameName;
+	}
 
-    public void seteShortGun(Long eShortGun) {
-        this.eShortGun = eShortGun;
-    }
+	public void setGameName(String gameName) {
+		this.gameName = gameName;
+	}
 
-    public Long geteBigGun() {
-        return eBigGun;
-    }
+	public Player() {
 
-    public void seteBigGun(Long eBigGun) {
-        this.eBigGun = eBigGun;
-    }
+	}
 
-    public Long getpGold() {
-        return pGold;
-    }
+	public Player(String pName, Integer pHealth, Long pGold,
+			Integer pEnergyDrink, byte pShortGun, byte pBigGun, String eName,
+			Integer eHealth, Long eGold, Integer eEnergyDrink, byte eShortGun,
+			byte eBigGun) {
+		this.pName = pName;
+		this.pHealth = pHealth;
+		this.pGold = pGold;
+		this.pEnergyDrink = pEnergyDrink;
+		this.pShortGun = pShortGun;
+		this.pBigGun = pBigGun;
+		this.eName = eName;
+		this.eHealth = eHealth;
+		this.eGold = eGold;
+		this.eEnergyDrink = eEnergyDrink;
+		this.eShortGun = eShortGun;
+		this.eBigGun = eBigGun;
+	}
 
-    public void setpGold(Long pGold) {
-        this.pGold = pGold;
-    }
+	public Integer getpEnergyDrink() {
+		return pEnergyDrink;
+	}
 
-    public Long geteGold() {
-        return eGold;
-    }
+	public void setpEnergyDrink(Integer pEnergyDrink) {
+		this.pEnergyDrink = pEnergyDrink;
+	}
 
-    public void seteGold(Long eGold) {
-        this.eGold = eGold;
-    }
+	public byte getpShortGun() {
+		return pShortGun;
+	}
 
-    public String getpName() {
-        return pName;
-    }
+	public void setpShortGun(byte pShortGun) {
+		this.pShortGun = pShortGun;
+	}
 
-    public void setpName(String pName) {
-        this.pName = pName;
-    }
+	public byte getpBigGun() {
+		return pBigGun;
+	}
 
-    public Integer getpHealth() {
-        return pHealth;
-    }
+	public void setpBigGun(byte pBigGun) {
+		this.pBigGun = pBigGun;
+	}
 
-    public void setpHealth(Integer pHealth) {
-        this.pHealth = pHealth;
-    }
+	public Integer geteEnergyDrink() {
+		return eEnergyDrink;
+	}
 
-    public String geteName() {
-        return eName;
-    }
+	public void seteEnergyDrink(Integer eEnergyDrink) {
+		this.eEnergyDrink = eEnergyDrink;
+	}
 
-    public void seteName(String eName) {
-        this.eName = eName;
-    }
+	public byte geteShortGun() {
+		return eShortGun;
+	}
 
-    public Integer geteHealth() {
-        return eHealth;
-    }
+	public void seteShortGun(byte eShortGun) {
+		this.eShortGun = eShortGun;
+	}
 
-    public void seteHealth(Integer eHealth) {
-        this.eHealth = eHealth;
-    }
+	public byte geteBigGun() {
+		return eBigGun;
+	}
 
-    @Override
-    public String toString() {
-        return "Players Detail: \n 1.Name P1 : " + pName + ", Health P1 : " + pHealth
-                + ", Gold P1 : " + pGold + ", EnergyDrink P1 : " + pEnergyDrink+ ", ShortGun P1 : " + pShortGun + ", BigGun P2 : " + pBigGun 
-                +" \n 2.Name P2 : " + eName + ", Health P2 : "
-                + eHealth + ", Gold P2 : " + eGold+ ", EnergyDrink P2 : " + eEnergyDrink+ ", ShortGun P2 : " + eShortGun + ", BigGun P2 : " + eBigGun;
-    }
+	public void seteBigGun(byte eBigGun) {
+		this.eBigGun = eBigGun;
+	}
+
+	public Long getpGold() {
+		return pGold;
+	}
+
+	public void setpGold(Long pGold) {
+		this.pGold = pGold;
+	}
+
+	public Long geteGold() {
+		return eGold;
+	}
+
+	public void seteGold(Long eGold) {
+		this.eGold = eGold;
+	}
+
+	public String getpName() {
+		return pName;
+	}
+
+	public void setpName(String pName) {
+		this.pName = pName;
+	}
+
+	public Integer getpHealth() {
+		return pHealth;
+	}
+
+	public void setpHealth(Integer pHealth) {
+		this.pHealth = pHealth;
+	}
+
+	public String geteName() {
+		return eName;
+	}
+
+	public void seteName(String eName) {
+		this.eName = eName;
+	}
+
+	public Integer geteHealth() {
+		return eHealth;
+	}
+
+	public void seteHealth(Integer eHealth) {
+		this.eHealth = eHealth;
+	}
+
+	@Override
+	public String toString() {
+		return "Players Detail: \n 1.Name P1 : " + pName + ", Health P1 : "
+				+ pHealth + ", Gold P1 : " + pGold + ", EnergyDrink P1 : "
+				+ pEnergyDrink + ", ShortGun P1 : " + pShortGun
+				+ ", BigGun P2 : " + pBigGun + " \n 2.Name P2 : " + eName
+				+ ", Health P2 : " + eHealth + ", Gold P2 : " + eGold
+				+ ", EnergyDrink P2 : " + eEnergyDrink + ", ShortGun P2 : "
+				+ eShortGun + ", BigGun P2 : " + eBigGun;
+	}
 }
