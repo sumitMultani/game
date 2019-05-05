@@ -1,10 +1,13 @@
 package com.example.coding.util;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
 import com.example.coding.model.Player;
@@ -12,10 +15,13 @@ import com.example.coding.model.Player;
 @Component
 public class CommonUtil {
 
+	private static Logger _log = Logger.getLogger(CommonUtil.class);
+	
 	@Autowired
 	private PlayerActions playerActions;
 	
 	public  void printTitle(){
+		_log.info("[printTitle] START");
 				System.out.println(" ________  _________  ________  _______   _______  _________        ________ ___  ________  ___  ___  _________  _______   ________          ___  ___");
 				System.out.println("|\\   ____\\|\\___   ___|\\   __  \\|\\  ___ \\ |\\  ___ \\|\\___   ___\\     |\\  _____|\\  \\|\\   ____\\|\\  \\|\\  \\|\\___   ___|\\  ___ \\ |\\   __  \\        |\\  \\|\\  \\ ");
 				System.out.println("\\ \\  \\___|\\|___ \\  \\_\\ \\  \\|\\  \\ \\   __/|\\ \\   __/\\|___ \\  \\_|     \\ \\  \\__/\\ \\  \\ \\  \\___|\\ \\  \\\\\\  \\|___ \\  \\_\\ \\   __/|\\ \\  \\|\\  \\       \\ \\  \\ \\  \\  ");
@@ -29,15 +35,19 @@ public class CommonUtil {
 				System.out.println("1. Start a New Game\n2. Load Game");		
 				printDashLine();
 				System.out.println("(Select 1 or 2) : ");
+				_log.info("[printTitle] EXIT");
 	}
 	
 	public void printPlayersName(Player p1) {
+		_log.info("[printPlayersName] START , PLAYER 1 : "+p1.getpName().toUpperCase()+
+				", PLAYER 2 : "+p1.geteName().toUpperCase());
 		System.out
 				.println("=======================START FIGHT===============================");
 		System.out.println("***********************  "
 				+ p1.getpName().toUpperCase() + " vs "
 				+ p1.geteName().toUpperCase() + "  ******************");
 		printDashLine();
+		_log.info("[printPlayersName] EXIT");
 	}
 	
 	public void printPlayersDetail(Player p1) {
@@ -45,6 +55,7 @@ public class CommonUtil {
 	}
 	
 	public void printActions(Player p1) {
+		_log.info("[printActions] START");
 		printDashLine();
 		System.out.println("Points :");
 		System.out
@@ -78,12 +89,13 @@ public class CommonUtil {
 		if (p1.geteBigGun() == 1) {
 			System.out.println("15. Big Gun Fire p2");
 		}
+		_log.info("[printActions] START, PLAYER : "+p1);
 	}
 	
 	
 	
 	public boolean decideWinnerAndContinue(Player playerData, boolean isPlay) {
-
+		_log.info("[decideWinnerAndContinue] START , playerData : "+playerData);
 		if (playerData.getpHealth() <= 0 || playerData.geteHealth() <= 0) {
 			printDashLine();
 			if (playerData.geteHealth() < playerData.getpHealth()) {
@@ -120,6 +132,7 @@ public class CommonUtil {
 				System.exit(0);
 			}
 		}
+		_log.info("[decideWinnerAndContinue] EXIT ");
 		return isPlay;
 	}
 
@@ -130,6 +143,7 @@ public class CommonUtil {
 	
 	Scanner scan = new Scanner(System.in);
 	public List<String> getPlayerNames() {
+		_log.info("[getPlayerNames] START");
 		List<String> names = new ArrayList<>();
 		System.out.println("======***==Create Characters By Name===***=======");
 		System.out.println("Enter Player1 Name : ");
@@ -138,6 +152,18 @@ public class CommonUtil {
 		System.out.println("Enter Player2 Name : ");
 		String name2 =scan.next();
 		names.add(name2);	
+		_log.info("[getPlayerNames] EXIT , names : "+names);
 		return names;
+	}
+	
+	public static String getFilePath(String fileName) {
+		String path = "";
+		try{
+			File file = new ClassPathResource(fileName).getFile();
+			path = file.getPath();
+		}catch(Exception e){
+			System.out.println(e);
+		}
+		return path;
 	}
 }

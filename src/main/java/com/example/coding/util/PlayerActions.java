@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -14,12 +15,15 @@ import com.example.coding.model.Player;
 @Component
 public class PlayerActions {
 
+	private static Logger _log = Logger.getLogger(PlayerActions.class);
+	
 	@Autowired
 	private CommonUtil commonUtil;
 	
 	Scanner scan = new Scanner(System.in);
 	
 	public boolean performActions(Player playerData, boolean isPlay) {
+		_log.info("[performActions] START , playerData : "+playerData+" ,isPlay : "+isPlay);
 		commonUtil.printActions(playerData);
 		int input = scan.nextInt();
 		if (input == 1 || input == 5) {
@@ -42,26 +46,32 @@ public class PlayerActions {
 		} else if (input == 13 || input == 15) {
 			fireBigGun(playerData, input);
 		}  
+		_log.info("[performActions] EXIT , playerData : "+playerData+" ,isPlay : "+isPlay);
 		return commonUtil.decideWinnerAndContinue(playerData, isPlay);
 	}
 	
 	public void hitPunch(Player playerData, int input) {
+		_log.info("[hitPunch] START , playerData : "+playerData+" , userInput : "+input);
 		if(input == 1)
 			playerData.seteHealth(playerData.geteHealth() - IConstants.Attack.PUNCH);
 		else if(input == 5)
 			playerData.setpHealth(playerData.getpHealth() - IConstants.Attack.PUNCH);
 		commonUtil.printPlayersDetail(playerData);
+		_log.info("[hitPunch] EXIT ");
 	}
 
 	public void hitKick(Player playerData, int input) {
+		_log.info("[hitKick] START , playerData : "+playerData+" , userInput : "+input);
 		if(input == 2)
 			playerData.seteHealth(playerData.geteHealth() - IConstants.Attack.KICK);
 		else if(input == 6)
 			playerData.setpHealth(playerData.getpHealth() - IConstants.Attack.KICK);
 		commonUtil.printPlayersDetail(playerData);
+		_log.info("[hitKick] EXIT");
 	}
 	
 	public void explorePlayer(Player p1, int input) {
+		_log.info("[explorePlayer] START , Player : "+p1+" , userInput : "+input);
 		boolean isExplored = true;
 		while (isExplored) {
 			System.out.println("What do you want to buy?");
@@ -155,8 +165,10 @@ public class PlayerActions {
 				commonUtil.printPlayersDetail(p1);
 			}
 		}
+		_log.info("[explorePlayer] EXIT");
 	}
 	public void boostEnergy(Player playerData, int input) {
+		_log.info("[boostEnergy] START , Player : "+playerData+" , userInput : "+input);
 		if(input == 4) {
 			playerData.setpHealth(playerData.getpHealth() + IConstants.BoostEnergy.BY_DRINK);
 			playerData.setpEnergyDrink(playerData.getpEnergyDrink() - 1);
@@ -165,9 +177,11 @@ public class PlayerActions {
 			playerData.seteEnergyDrink(playerData.geteEnergyDrink() - 1);
 		}
 		commonUtil.printPlayersDetail(playerData);
+		_log.info("[boostEnergy] EXIT ");
 	}
 	
 	private void saveGame(Scanner scan, Player playerData) {
+		_log.info("[saveGame] START , Player : "+playerData);
 		try {
 			System.out.println("Enter Game Name Without space : ");
 			String gameName = scan.next();
@@ -176,11 +190,14 @@ public class PlayerActions {
 			System.out.println("Game saved Successfully and Exit");
 		} catch (IOException e) {
 			System.out.println("EXIT DUE TO : " + e.getMessage());
+			_log.error("[saveGame] Exception : "+e.getMessage());
 			System.exit(0);
 		}
+		_log.info("[saveGame] EXIT"); 
 	}
 	
 	public boolean loadGame() {
+		_log.info("[loadGame] START");
 		boolean isLoadSuccess = true;
 		try {
 			Player p1;
@@ -204,33 +221,38 @@ public class PlayerActions {
 				isPlay = performActions(p1, isPlay);
 			}
 		} catch (Exception e) {
+			_log.error("[loadGame] Exception : "+e.getMessage());
 			System.out.println("EXIT DUE TO : " + e.getMessage());
 			isLoadSuccess = false;
 		}
+		_log.info("[loadGame] EXIT");
 		return isLoadSuccess;
 	}
 
 	public void exitGame() {
+		_log.info("[exitGame] EXIT SUCCESSFULLY.");
 		System.out.println("EXIT SUCCESSFULLY.");
 		System.exit(0);
 	}
 	
 	public void fireBigGun(Player playerData, int input) {
+		_log.info("[fireBigGun] START , Player : "+playerData +" ,userInput : "+input);
 		if(input == 13)
 			playerData.seteHealth(playerData.geteHealth() - IConstants.Attack.BIG_GUN);
 		else if(input == 15)
 			playerData.setpHealth(playerData.getpHealth() - IConstants.Attack.BIG_GUN);
 			commonUtil.printPlayersDetail(playerData);
+			_log.info("[fireBigGun] EXIT ");
 	}
 
 	public void fireShortGun(Player playerData, int input) {
+		_log.info("[fireShortGun] START , Player : "+playerData+" , userInput : "+input);
 		if(input == 12)
 			playerData.seteHealth(playerData.geteHealth() - IConstants.Attack.SHORT_GUN);
 		else if(input == 14)
 			playerData.setpHealth(playerData.getpHealth() - IConstants.Attack.SHORT_GUN);
 		commonUtil.printPlayersDetail(playerData);
+		_log.info("[fireShortGun] EXIT");
 	}
-
-	
 
 }

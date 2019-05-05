@@ -21,7 +21,7 @@ public class FightGameControllerTest {
 
 	
 	private final String successResponse = "GAME FINISHED SUCCESSFULLY.";
-	private final String failResponse = "GAME FAILED DUE TO MISMATCH VALUE.";
+	private final String failResponse = "GAME FAILED TO START DUE TO WRONG SELECTED VALUE.";
 	
 	@InjectMocks
     private FightGameController fightGameController;

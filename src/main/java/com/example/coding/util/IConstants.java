@@ -33,6 +33,6 @@ public interface IConstants {
 
 	interface Response {
 		String SUCCESS = "GAME FINISHED SUCCESSFULLY.";
-		String FAIL = "GAME FAILED DUE TO MISMATCH VALUE.";
+		String FAIL = "GAME FAILED TO START DUE TO WRONG SELECTED VALUE.";
 	}
 }

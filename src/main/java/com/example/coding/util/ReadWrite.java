@@ -14,10 +14,12 @@ import com.example.coding.model.Player;
 
 public class ReadWrite {
 
+	private static final String fileName = "myObjects.txt";
+	
     public static void writeData(Player p) throws IOException {
         String textToAppend = getJson(p);
         BufferedWriter writer = new BufferedWriter(new FileWriter(
-                "myObjects.txt", true));
+        		CommonUtil.getFilePath(fileName), true));
         writer.newLine();
         writer.write(textToAppend);
         writer.close();
@@ -29,7 +31,7 @@ public class ReadWrite {
         String ob = "";
         Set<Player> list = new LinkedHashSet<>();
         try {
-            file = new File("myObjects.txt");
+            file = new File(CommonUtil.getFilePath(fileName));
             reader = new FileReader(file);
             int i;
             while ((i = reader.read()) != -1) {
