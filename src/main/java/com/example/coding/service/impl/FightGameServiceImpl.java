@@ -1,455 +1,361 @@
 package com.example.coding.service.impl;
 
-import java.awt.Canvas;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
-import java.awt.event.KeyEvent;
-import java.awt.image.BufferStrategy;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
-
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import javax.swing.JFrame;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
 
 import org.springframework.stereotype.Service;
 
-import com.example.coding.model.BufferedImageLoader;
-import com.example.coding.model.CharSel1;
-import com.example.coding.model.KeyInput;
-import com.example.coding.model.Menu;
-import com.example.coding.model.MouseInput;
 import com.example.coding.model.Player;
-import com.example.coding.model.Player2;
-import com.example.coding.model.Texture;
 import com.example.coding.service.FightGameService;
 import com.example.coding.util.IConstants;
+import com.example.coding.util.ReadWrite;
 
 @Service
-public class FightGameServiceImpl extends Canvas implements FightGameService,
-		Runnable {
-
-	private static final long serialVersionUID = -8569179005261735671L;
-
-	private boolean running = false;
-	private Thread thread;
-	private CharSel1 charSel1;
-	private BufferedImage menuIMG = null;
-	private BufferedImage charSelIMG = null;
-	private Menu menu;
-	public BufferedImage player1 = null; 
-	public BufferedImage player2 = null; 
-	public BufferedImage gameBG = null;
-	public static IConstants.STATE State = IConstants.STATE.MENU;
-	private Player p;
-	private Player2 p2;
-	static Texture tex;
-
-	// current state and choice
-	public static IConstants.CHOICEP1 ChoiceP1 = IConstants.CHOICEP1.NOTHING;
-	public static IConstants.CHOICEP2 ChoiceP2 = IConstants.CHOICEP2.NOTHING2;
+public class FightGameServiceImpl implements FightGameService {
 
 	@Override
-	public void gameStart() {
+	public void startGame() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("1. NEW GAME");
+		System.out.println("2. LOAD GAME");
+		System.out.println("(Select 1 or 2)");
+		int startPoint = scan.nextInt();
+		if (startPoint == 1) {
+			startNewGame(scan);
+		} else if (startPoint == 2) {
+			loadGame2(scan);
+		}
 
-		FightGameServiceImpl game = new FightGameServiceImpl();
-		game.setPreferredSize(new Dimension(IConstants.gameWindows.WIDTH
-				* IConstants.gameWindows.SCALE, IConstants.gameWindows.HEIGHT
-				* IConstants.gameWindows.SCALE));
-		game.setMaximumSize(new Dimension(IConstants.gameWindows.WIDTH
-				* IConstants.gameWindows.SCALE, IConstants.gameWindows.HEIGHT
-				* IConstants.gameWindows.SCALE));
-		game.setMinimumSize(new Dimension(IConstants.gameWindows.WIDTH
-				* IConstants.gameWindows.SCALE, IConstants.gameWindows.HEIGHT
-				* IConstants.gameWindows.SCALE));
-
-		JFrame frame = new JFrame("Final Battle.");
-		frame.add(game);
-		frame.pack();
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setResizable(false);
-		frame.setLocationRelativeTo(null);
-		frame.setVisible(true);
-		game.start();
 	}
 
-	private synchronized void start() {
-		if (running)
-			return;
-		running = true;
-		thread = new Thread(this);
-		thread.start();
+	private static void startNewGame(Scanner scan) {
+		Player p1;
+		System.out.println("======***==Create a Character===***=======");
+		System.out.println("Enter Player1 Name : ");
+		String p1Name = scan.next();
+		System.out.println("Enter Player2 Name : ");
+		String p2Name = scan.next();
+
+		p1 = new Player(p1Name, 100, 1000l, 5l, 0l, 0l, p2Name, 100, 1000l, 5l,
+				0l, 0l);
+		// System.out.println(p1);
+		System.out
+				.println("=======================START FIGHT===============================");
+		System.out.println("***********************  "
+				+ p1.getpName().toUpperCase() + " vs "
+				+ p1.geteName().toUpperCase() + "  ******************");
+		System.out
+				.println("==================================================================");
+		System.out.println(p1);
+		boolean isPlay = true;
+		// repeat action
+		while (isPlay) {
+			isPlay = performActions(scan, p1, isPlay);
+		}
 	}
 
-	@Override
-	public void run() {
-		init();
+	private static boolean performActions(Scanner scan, Player playerData,
+			boolean isPlay) {
+		printActions(playerData);
+		int input = scan.nextInt();
+		if (input == 1) {
+			playerData.seteHealth(playerData.geteHealth() - IConstants.Attack.PUNCH);
+			System.out.println(playerData);
+		} else if (input == 2) {
+			playerData.seteHealth(playerData.geteHealth() - IConstants.Attack.KICK);
+			System.out.println(playerData);
+		} else if (input == 3) {
+			explorePlayer1(scan, playerData);
+		} else if (input == 4) {
+			playerData.setpHealth(playerData.getpHealth() + IConstants.BoostEnergy.BY_DRINK);
+			playerData.setpEnergyDrink(playerData.getpEnergyDrink() - 1);
+			System.out.println(playerData);
+		} else if (input == 5) {
+			playerData.setpHealth(playerData.getpHealth() - IConstants.Attack.PUNCH);
+			System.out.println(playerData);
+		} else if (input == 6) {
+			playerData.setpHealth(playerData.getpHealth() - IConstants.Attack.KICK);
+			System.out.println(playerData);
+		} else if (input == 7) {
+			explorePlayer2(scan, playerData);
+		} else if (input == 8) {
+			playerData.seteHealth(playerData.geteHealth() + IConstants.BoostEnergy.BY_DRINK);
+			playerData.seteEnergyDrink(playerData.geteEnergyDrink() - 1);
+			System.out.println(playerData);
+		} else if (input == 9) {
+			isPlay = saveGame(scan, playerData);
+		} else if (input == 10) {
+			playerData = loadGame(scan, playerData);
+		} else if (input == 11) {
+			System.out.println("EXIT SUCCESSFULLY.");
+			System.exit(0);
+		} else if (input == 12) {
+			playerData.seteHealth(playerData.geteHealth() - IConstants.Attack.SHORT_GUN);
+			System.out.println(playerData);
+		} else if (input == 13) {
+			playerData.seteHealth(playerData.geteHealth() - IConstants.Attack.BIG_GUN);
+			System.out.println(playerData);
+		} else if (input == 14) {
+			playerData.setpHealth(playerData.getpHealth() - IConstants.Attack.SHORT_GUN);
+			System.out.println(playerData);
+		} else if (input == 15) {
+			playerData.setpHealth(playerData.getpHealth() - IConstants.Attack.BIG_GUN);
+			System.out.println(playerData);
+		}
 
-		long lastTime = System.nanoTime();
-		final double amountOfTicks = 60.0;
-		double ns = 1000000000 / amountOfTicks;
-		double delta = 0;
-		int updates = 0;
-		int frames = 0;
-		long timer = System.currentTimeMillis();
-
-		while (running) {
-			long now = System.nanoTime();
-			delta += (now - lastTime) / ns;
-			lastTime = now;
-			if (delta >= 1) {
-				tick();
-				updates++;
-				delta--;
+		// compare champion.
+		if (playerData.getpHealth() <= 0 || playerData.geteHealth() <= 0) {
+			if (playerData.geteHealth() < playerData.getpHealth()) {
+				System.out.println(playerData.getpName().toUpperCase()
+						+ " IS WINNER.");
+				playerData.seteHealth(0);
+				playerData.setpGold(playerData.getpGold() + IConstants.Bonus.GOLD);
+			} else {
+				System.out.println(playerData.geteName().toUpperCase()
+						+ " IS WINNER.");
+				playerData.setpHealth(0);
+				playerData.seteGold(playerData.geteGold() + IConstants.Bonus.GOLD);
 			}
-			render();
-			frames++;
-
-			if (System.currentTimeMillis() - timer > 1000) {
-				timer += 1000;
-				System.out.println(updates + " Ticks, FPS " + frames);
-				updates = 0;
-				frames = 0;
+			System.out.println("GAME FINISHED.");
+			System.out.println("Do you want to Continue The Game? ");
+			System.out.println("1. YES");
+			System.out.println("2. NO");
+			int value = scan.nextInt();
+			if (value == 1) {
+				while (isPlay) {
+					if (playerData.geteHealth() <= 0) {
+						playerData.seteHealth(100);
+						playerData.setpHealth(playerData.getpHealth() + 100);
+					} else if (playerData.getpHealth() <= 0) {
+						playerData.setpHealth(100);
+						playerData.seteHealth(playerData.geteHealth() + 100);
+					}
+					System.out.println(playerData);
+					isPlay = performActions(scan, playerData, isPlay);
+				}
+			} else if (value == 2) {
+				System.exit(0);
 			}
 		}
-		stop();
+		return isPlay;
 	}
 
-	private synchronized void stop() {
-		if (!running)
-			return;
-		running = false;
+	private static void loadGame2(Scanner scan) {
+		Player p1;
 		try {
-			thread.join();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
+			Set<Player> listData = ReadWrite.readData();
+			Map<Integer, Player> mapOfSavedGames = new LinkedHashMap<>();
+			int count = 1;
+			System.out.println("Select Number to Load Game : ");
+			for (Player player : listData) {
+				mapOfSavedGames.put(count, player);
+				System.out.println(count + " : " + player.getGameName());
+				count++;
+			}
+
+			int selectedCount = scan.nextInt();
+			Player player = mapOfSavedGames.get(selectedCount);
+			p1 = player;
+			System.out.println("saved Game Start...");
+			System.out.println(p1);
+			boolean isPlay = true;
+			// repeat action
+			while (isPlay) {
+				isPlay = performActions(scan, p1, isPlay);
+			}
+		} catch (Exception e) {
+			System.out.println("EXIT DUE TO : " + e.getMessage());
+			System.exit(0);
 		}
-		System.exit(1);
 	}
 
-	public void init() {
-
-		BufferedImageLoader loaderMenu = new BufferedImageLoader();
-		BufferedImageLoader loaderChar = new BufferedImageLoader();
-		BufferedImageLoader loaderGBG = new BufferedImageLoader();
-		tex = new Texture();
+	private static Player loadGame(Scanner scan, Player playerData) {
 		try {
-			menuIMG = loaderMenu.loadImage("/res/BG.jpg");
+			Set<Player> listData = ReadWrite.readData();
+			Map<Integer, Player> mapOfSavedGames = new LinkedHashMap<>();
+			int count = 1;
+			System.out.println("Select Number to Load Game : ");
+			for (Player player : listData) {
+				mapOfSavedGames.put(count, player);
+				System.out.println(count + " : " + player.getGameName());
+				count++;
+			}
+
+			int selectedCount = scan.nextInt();
+			Player player = mapOfSavedGames.get(selectedCount);
+			playerData = player;
+			System.out.println("saved Game Start...");
+			System.out.println(playerData);
+		} catch (Exception e) {
+			System.out.println("EXIT DUE TO : " + e.getMessage());
+			System.exit(0);
+		}
+		return playerData;
+	}
+
+	private static boolean saveGame(Scanner scan, Player playerData) {
+		boolean isPlay;
+		try {
+			System.out.println("Enter Game Name Without space : ");
+			String gameName = scan.next();
+			playerData.setGameName(gameName);
+			ReadWrite.writeData(playerData);
+			System.out.println("Game saved Successfully and Exit");
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("EXIT DUE TO : " + e.getMessage());
+			System.exit(0);
 		}
-		try {
-			gameBG = loaderGBG.loadImage("/res/GAME_BG.JPG");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		try {
-			charSelIMG = loaderChar.loadImage("/res/CHAR_BG.jpg");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		this.addMouseListener(new MouseInput());
-		addKeyListener(new KeyInput(this));
-		menu = new Menu();
-		charSel1 = new CharSel1();
+		isPlay = false;
+		return isPlay;
 	}
 
-	private void tick() {
-		if (State == IConstants.STATE.GAME) {
-			p.tick();
-			p2.tick();
-		}
-		if (State == IConstants.STATE.GAME) {
-			p.init();
-			p2.init();
-		}
-		if (State == IConstants.STATE.CHOOSE) {
-			p = new Player(140.0, 340.0);
-			p2 = new Player2(800.0 - 140.0, 340.0);
-			State = IConstants.STATE.GAME;
+	private static void explorePlayer2(Scanner scan, Player p1) {
+		boolean isExplored = true;
+		while (isExplored) {
+			System.out.println("What do you want to buy?");
+			System.out.println("1. Energy Drink.");
+			System.out.println("2. short Gun [Cost : 100 Gold]");
+			System.out.println("3. big Gun [Cost : 200 Gold]");
+			System.out.println("4. Don't want to Buy Anything.");
+			int n = scan.nextInt();
+			if (n == 1) {
+				System.out.println("How Many Drink you want to buy ("
+						+ IConstants.Price.ENERGY_DRINNK + " gold per piece) : ");
+				int drinkCount = scan.nextInt();
+				int totalPrice = drinkCount * IConstants.Price.ENERGY_DRINNK;
+				if (p1.geteGold() >= totalPrice) {
+					System.out.println("Purchased successfully.");
+					p1.seteGold(p1.geteGold() - totalPrice);
+					p1.seteEnergyDrink(p1.geteEnergyDrink() + drinkCount);
+					System.out.println(p1);
+					isExplored = false;
+				} else
+					System.out
+							.println("You don't have enough money to purchase.");
+			} else if (n == 2) {
+				if (p1.geteGold() >= IConstants.Price.SHORT_GUN) {
+					if (p1.geteShortGun() == 0) {
+						p1.seteGold(p1.geteGold() - IConstants.Price.SHORT_GUN);
+						p1.seteShortGun(1l);
+						isExplored = false;
+					} else {
+						System.out.println("You Have Already A Short Gun.");
+					}
+					System.out.println(p1);
+				} else
+					System.out
+							.println("You don't have enough money to purchase.");
+			} else if (n == 3) {
+				if (p1.geteGold() >= IConstants.Price.BIG_GUN) {
+					if (p1.geteBigGun() == 0) {
+						p1.seteGold(p1.geteGold() - IConstants.Price.BIG_GUN);
+						p1.seteBigGun(1l);
+						isExplored = false;
+					} else {
+						System.out.println("You Have Already A Big Gun.");
+					}
+					System.out.println(p1);
+				} else
+					System.out
+							.println("You don't have enough money to purchase.");
+			} else if (n == 4) {
+				isExplored = false;
+				System.out.println(p1);
+			}
 		}
 	}
 
-	private BufferedImage image = new BufferedImage(WIDTH, HEIGHT,
-			BufferedImage.TYPE_INT_RGB);
-
-	private void render() {
-		BufferStrategy bs = this.getBufferStrategy();
-		if (bs == null) {
-			createBufferStrategy(3);
-			return;
+	private static void explorePlayer1(Scanner scan, Player p1) {
+		boolean isExplored = true;
+		while (isExplored) {
+			System.out.println("What do you want to buy?");
+			System.out.println("1. Energy Drink.");
+			System.out.println("2. short Gun [Cost : 100 Gold]");
+			System.out.println("3. big Gun [Cost : 200 Gold]");
+			System.out.println("4. Don't want to Buy Anything.");
+			int n = scan.nextInt();
+			if (n == 1) {
+				System.out.println("How Many Drink you want to buy ("
+						+ IConstants.Price.ENERGY_DRINNK + " gold per piece) : ");
+				int drinkCount = scan.nextInt();
+				int totalPrice = drinkCount * IConstants.Price.ENERGY_DRINNK;
+				if (p1.getpGold() >= totalPrice) {
+					System.out.println("Purchased successfully.");
+					p1.setpGold(p1.getpGold() - totalPrice);
+					p1.setpEnergyDrink(p1.getpEnergyDrink() + drinkCount);
+					System.out.println(p1);
+					isExplored = false;
+				} else
+					System.out
+							.println("You don't have enough money to purchase.");
+			} else if (n == 2) {
+				if (p1.getpGold() >= IConstants.Price.SHORT_GUN) {
+					if (p1.getpShortGun() == 0) {
+						p1.setpGold(p1.getpGold() - IConstants.Price.SHORT_GUN);
+						p1.setpShortGun(1l);
+						isExplored = false;
+					} else {
+						System.out.println("You Have Already A Short Gun.");
+					}
+					System.out.println(p1);
+				} else
+					System.out
+							.println("You don't have enough money to purchase.");
+			} else if (n == 3) {
+				if (p1.getpGold() >= IConstants.Price.BIG_GUN) {
+					if (p1.getpBigGun() == 0) {
+						p1.setpGold(p1.getpGold() - IConstants.Price.BIG_GUN);
+						p1.setpBigGun(1l);
+						isExplored = false;
+					} else {
+						System.out.println("You Have Already A Big Gun.");
+					}
+					System.out.println(p1);
+				} else
+					System.out
+							.println("You don't have enough money to purchase.");
+			} else if (n == 4) {
+				isExplored = false;
+				System.out.println(p1);
+			}
 		}
-		Graphics g = bs.getDrawGraphics();
-
-		g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
-		if (State == IConstants.STATE.GAME) {
-
-			g.clearRect(0, 0, 800, 600);
-
-			g.drawImage(gameBG, 0, 0, null);
-			p.render(g);
-			p2.render(g);
-
-		} else if (State == IConstants.STATE.MENU) {
-			g.clearRect(0, 0, 800, 600);
-			g.drawImage(menuIMG, 0, 0, null);
-			menu.render(g);
-
-		} else if (State == IConstants.STATE.CHARSEL1 || State == IConstants.STATE.CHARSEL2) {
-			g.clearRect(0, 0, 800, 600);
-			g.drawImage(charSelIMG, 0, 0, null);
-			charSel1.render(g);
-		}
-		g.dispose();
-		bs.show();
 	}
 
-	public Rectangle playButton = new Rectangle(41, 225, 131, 69);
-	public Rectangle optionsButton = new Rectangle(41, 312, 131, 69);
-	public Rectangle exitButton = new Rectangle(41, 400, 131, 69);
-
-	public void render(Graphics g) {
-		Graphics2D g2d = (Graphics2D) g;
-		g2d.draw(playButton);
-		g2d.draw(optionsButton);
-		g2d.draw(exitButton);
-	}
-
-	public static Texture getInstance() {
-		return tex;
-	}
-
-	public void keyPressed(KeyEvent e) {
-		int key = e.getKeyCode();
-
-		if (key == KeyEvent.VK_D) {
-			p.setVelX(5);
-		} else if (key == KeyEvent.VK_A) {
-			p.setVelX(-5);
-		} else if (key == KeyEvent.VK_S) {
-			p.setVelY(1);
-		} else if (key == KeyEvent.VK_W && !p.isJumping()) {
-			p.setVelY(-17);
-			try {
-				AudioInputStream audioInputStream = AudioSystem
-						.getAudioInputStream(this.getClass().getResource(
-								"/music/jump.wav"));
-				Clip clip = AudioSystem.getClip();
-				clip.open(audioInputStream);
-				clip.start();
-			}
-
-			catch (Exception ex) {
-			}
-
-		} else if (key == KeyEvent.VK_J) {
-			p.punch = true;
-			p.inAction = true;
-
-			// punch audio file
-			try {
-				AudioInputStream audioInputStream = AudioSystem
-						.getAudioInputStream(this.getClass().getResource(
-								"/music/punch.au"));
-				Clip clip = AudioSystem.getClip();
-				clip.open(audioInputStream);
-				clip.start();
-			}
-
-			catch (Exception ex) {
-			}
-
-			if (p.facing == 1 && p.getX() != 0) {
-				p.setVelX(0);
-			} else if (p.facing == 0 && p.getX() != 0) {
-				p.setVelX(0);
-			}
-		} else if (key == KeyEvent.VK_K) {
-			p.kick = true;
-			p.inAction = true;
-
-			// kick audio file
-
-			try {
-				AudioInputStream audioInputStream = AudioSystem
-						.getAudioInputStream(this.getClass().getResource(
-								"/music/kick.wav"));
-				Clip clip = AudioSystem.getClip();
-				clip.open(audioInputStream);
-				clip.start();
-			} catch (Exception ex) {
-			}
-			p.setVelX(0);
-		} else if (key == KeyEvent.VK_L) {
-			p.special = true;
-			p.inAction = true;
-
-			// punch audio file
-			try {
-				AudioInputStream audioInputStream = AudioSystem
-						.getAudioInputStream(this.getClass().getResource(
-								"/music/select.wav"));
-				Clip clip = AudioSystem.getClip();
-				clip.open(audioInputStream);
-				clip.start();
-			}
-
-			catch (Exception ex) {
-			}
-
-			//
-			p.setVelX(0);
-		} else if (key == KeyEvent.VK_S && key == KeyEvent.VK_D) {
-			p.setX(p.getX() + 140);
-			p.strafe = true;
-			p.inAction = true;
-		} else if (key == KeyEvent.VK_S && key == KeyEvent.VK_A) {
-			p.setX(p.getX() - 140);
-			p.strafe = true;
-			p.inAction = true;
+	private static void printActions(Player p1) {
+		System.out.println("Points :");
+		System.out
+				.println("[Punch = -5, Kick = -10, Explore = Buy Products, Energy = +50]");
+		System.out.println("What do you want to do ?");
+		System.out.println("1. Punch by P1");
+		System.out.println("2. Kick by P1");
+		System.out.println("3. Explore P1");
+		if (p1.getpEnergyDrink() > 0) {
+			System.out.println("4. Boost Energy P1");
 		}
-
-		if (key == KeyEvent.VK_RIGHT) {
-			p2.setVelXp2(5);
-		} else if (key == KeyEvent.VK_LEFT) {
-			p2.setVelXp2(-5);
-		} else if (key == KeyEvent.VK_DOWN) {
-			p2.setVelYp2(1);
-		} else if (key == KeyEvent.VK_UP && !p2.isJumpingp2()) {
-			p2.setVelYp2(-17);
-
-			try {
-				AudioInputStream audioInputStream = AudioSystem
-						.getAudioInputStream(this.getClass().getResource(
-								"/music/jump.wav"));
-				Clip clip = AudioSystem.getClip();
-				clip.open(audioInputStream);
-				clip.start();
-			} catch (Exception ex) {
-			}
-		} else if (key == KeyEvent.VK_NUMPAD1) {
-			p2.punchP2 = true;
-			p2.inActionP2 = true;
-
-			try {
-				AudioInputStream audioInputStream = AudioSystem
-						.getAudioInputStream(this.getClass().getResource(
-								"/music/punch2.wav"));
-				Clip clip = AudioSystem.getClip();
-				clip.open(audioInputStream);
-				clip.start();
-			} catch (Exception ex) {
-			}
-
-			p2.setVelXp2(0);
-		} else if (key == KeyEvent.VK_NUMPAD2) {
-			p2.kickP2 = true;
-			p2.inActionP2 = true;
-			try {
-				AudioInputStream audioInputStream = AudioSystem
-						.getAudioInputStream(this.getClass().getResource(
-								"/music/kick2.wav"));
-				Clip clip = AudioSystem.getClip();
-				clip.open(audioInputStream);
-				clip.start();
-			}
-
-			catch (Exception ex) {
-			}
-			p2.setVelXp2(0);
-		} else if (key == KeyEvent.VK_NUMPAD3) {
-			p2.specialP2 = true;
-			p2.inActionP2 = true;
-
-			try {
-				AudioInputStream audioInputStream = AudioSystem
-						.getAudioInputStream(this.getClass().getResource(
-								"/music/special2.wav"));
-				Clip clip = AudioSystem.getClip();
-				clip.open(audioInputStream);
-				clip.start();
-			}
-
-			catch (Exception ex) {
-			}
-
-			p2.setVelXp2(0);
-		} else if (key == KeyEvent.VK_DOWN && key == KeyEvent.VK_LEFT) {
-			p2.strafeP2 = true;
-			p2.inActionP2 = true;
-		} else if (key == KeyEvent.VK_DOWN && key == KeyEvent.VK_RIGHT) {
-			p2.strafeP2 = true;
-			p2.inActionP2 = true;
-
+		System.out.println("5. Punch by P2");
+		System.out.println("6. Kick by P2");
+		System.out.println("7. Explore  P2");
+		if (p1.geteEnergyDrink() > 0) {
+			System.out.println("8. Boost Energy P2");
 		}
-
-	}
-
-	public void keyReleased(KeyEvent e) {
-		int key = e.getKeyCode();
-
-		if (key == KeyEvent.VK_D) {
-			p.setVelX(0);
-		} else if (key == KeyEvent.VK_A) {
-			p.setVelX(0);
-		} else if (key == KeyEvent.VK_S) {
-			// p.setVelY(0);
-		} else if (key == KeyEvent.VK_W) {
-			// p.setVelY(0);
-		} else if (key == KeyEvent.VK_J) {
-			p.punch = false;
-			p.inAction = false;
-
-		} else if (key == KeyEvent.VK_K) {
-			p.kick = false;
-			p.inAction = false;
-			p.setVelX(0);
-		} else if (key == KeyEvent.VK_L) {
-			p.special = false;
-			p.inAction = false;
-			p.setVelX(0);
-		} else if (key == KeyEvent.VK_S && key == KeyEvent.VK_D) {
-			p.setX(p.getX() + 140);
-			p.strafe = false;
-			p.inAction = false;
-		} else if (key == KeyEvent.VK_S && key == KeyEvent.VK_A) {
-			p.setX(p.getX() - 140);
-			p.strafe = false;
-			p.inAction = false;
+		System.out.println("9. Save And Exit Game");
+		System.out.println("10. Open Saved Games");
+		System.out.println("11. Exit");
+		if (p1.getpShortGun() == 1) {
+			System.out.println("12. Short Gun Fire p1");
 		}
-
-		if (key == KeyEvent.VK_RIGHT) {
-			p2.setVelXp2(0);
-		} else if (key == KeyEvent.VK_LEFT) {
-			p2.setVelXp2(0);
-		} else if (key == KeyEvent.VK_DOWN) {
-			// p2.setVelYp2(0);
-		} else if (key == KeyEvent.VK_UP) {
-			// p2.setVelYp2(0);
-		} else if (key == KeyEvent.VK_NUMPAD1) {
-			p2.punchP2 = false;
-			p2.inActionP2 = false;
-			p2.setVelXp2(0);
-		} else if (key == KeyEvent.VK_NUMPAD2) {
-			p2.kickP2 = false;
-			p2.inActionP2 = false;
-			p2.setVelXp2(0);
-		} else if (key == KeyEvent.VK_NUMPAD3) {
-			p2.specialP2 = false;
-			p2.inActionP2 = false;
-			p2.setVelXp2(0);
-		} else if (key == KeyEvent.VK_DOWN && key == KeyEvent.VK_LEFT) {
-			p2.strafeP2 = false;
-			p2.inActionP2 = false;
-		} else if (key == KeyEvent.VK_DOWN && key == KeyEvent.VK_RIGHT) {
-			p2.strafeP2 = false;
-			p2.inActionP2 = false;
-
+		if (p1.getpBigGun() == 1) {
+			System.out.println("13. Big Gun Fire p1");
 		}
-
+		if (p1.geteShortGun() == 1) {
+			System.out.println("14. Short Gun Fire p2");
+		}
+		if (p1.geteBigGun() == 1) {
+			System.out.println("15. Big Gun Fire p2");
+		}
 	}
 
 }

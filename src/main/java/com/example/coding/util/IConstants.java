@@ -1,24 +1,25 @@
 package com.example.coding.util;
 
-public class IConstants {
+public interface IConstants {
 
-	public static enum CHOICEP1 {
-		BONDP1, SAADP1, NOTHING
-	};
-
-	public static enum CHOICEP2 {
-		BONDP2, SAADP2, NOTHING2
-	};
-
-	public static enum STATE {
-		MENU, CHARSEL1, CHARSEL2, CHOOSE, GAME
-	};
-
-	public interface gameWindows {
-		public static final int WIDTH = 790;
-		public static final int HEIGHT = 590;
-		public static final int SCALE = 1;
-		public final String TITLE = "Final Battle.";
+	interface Bonus {
+		Integer GOLD = 500;
 	}
 
+	interface BoostEnergy {
+		Integer BY_DRINK = 50;
+	}
+
+	interface Attack {
+		Integer PUNCH = 5;
+		Integer KICK = 10;
+		Integer SHORT_GUN = 15;
+		Integer BIG_GUN = 25;
+	}
+
+	interface Price {
+		Integer ENERGY_DRINNK = 50;
+		Integer SHORT_GUN = 100;
+		Integer BIG_GUN = 200;
+	}
 }

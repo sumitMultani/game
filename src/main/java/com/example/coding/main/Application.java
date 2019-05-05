@@ -1,5 +1,8 @@
 package com.example.coding.main;
 
+import java.util.Scanner;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -8,6 +11,9 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
+import com.example.coding.controller.FightGameController;
+import com.example.coding.util.CommonUtil;
+
 @SpringBootApplication
 @ComponentScan({ "com.example" })
 @EntityScan({ "com.example" })
@@ -15,10 +21,14 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 public class Application {
 
+	@Autowired
+	private CommonUtil commonUtil;
+
 	public static void main(String[] args) {
-		// SpringApplication.run(Application.class, args);
 		ConfigurableApplicationContext context = new SpringApplicationBuilder(
 				Application.class).headless(false).run(args);
-		Application appFrame = context.getBean(Application.class);
+		FightGameController game = context.getBean(FightGameController.class);
+		game.startGame();
 	}
+
 }
