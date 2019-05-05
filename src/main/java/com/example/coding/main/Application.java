@@ -1,5 +1,7 @@
 package com.example.coding.main;
 
+import java.util.Scanner;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,13 +22,16 @@ import com.example.coding.util.CommonUtil;
 public class Application {
 
 	@Autowired
-	private CommonUtil commonUtil;
+	private static CommonUtil commonUtil;
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = new SpringApplicationBuilder(
 				Application.class).headless(false).run(args);
 		FightGameController game = context.getBean(FightGameController.class);
-		game.startGame();
+		commonUtil.printTitle();
+		Scanner scan = new Scanner(System.in);
+		int startPoint = scan.nextInt();
+		game.startGame(startPoint);
 	}
 
 }
