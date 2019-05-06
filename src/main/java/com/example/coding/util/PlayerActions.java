@@ -20,6 +20,8 @@ public class PlayerActions {
 	@Autowired
 	private CommonUtil commonUtil;
 	
+	 
+	
 	Scanner scan = new Scanner(System.in);
 	
 	public boolean performActions(Player playerData, boolean isPlay) {

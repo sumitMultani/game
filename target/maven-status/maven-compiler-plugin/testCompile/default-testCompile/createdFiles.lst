@@ -1,1 +1,4 @@
-com\example\coding\controller\HelloControllerTest.class
+com\example\coding\service\FightGameServiceTest.class
+com\example\coding\util\PlayerActionsTest.class
+com\example\coding\util\CommonUtilTest.class
+com\example\coding\controller\FightGameControllerTest.class
