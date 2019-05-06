@@ -14,7 +14,7 @@ import com.example.coding.model.Player;
 
 public class ReadWrite {
 
-	private static final String fileName = "/myObjects.txt";
+	private static final String fileName = "myObjects.txt";
 
 	public static void writeData(Player p) throws IOException {
 		String textToAppend = getJson(p);

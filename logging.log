@@ -189,3 +189,393 @@
 2019-05-06 10:05:32 INFO  - [performActions] EXIT , playerData : Players Detail: 
  1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
  2.Name P2 : P2, Health P2 : 95, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:28 INFO  - [startGame] userInput : 2
+2019-05-06 10:11:28 INFO  - [startGame] userInput : 1
+2019-05-06 10:11:28 INFO  - [startGame] userInput : 3
+2019-05-06 10:11:28 ERROR - [startGame] Exception : null
+2019-05-06 10:11:28 INFO  - [startGame] userInput : 3
+2019-05-06 10:11:28 ERROR - [startGame] Exception : null
+2019-05-06 10:11:28 INFO  - [startGame] userInput : 3
+2019-05-06 10:11:28 ERROR - [startGame] Exception : null
+2019-05-06 10:11:29 INFO  - [startNewGame] : START
+2019-05-06 10:11:29 INFO  - [startNewGame] : EXIT , isLoadedSuccessfully : true
+2019-05-06 10:11:29 INFO  - [startNewGame] : START
+2019-05-06 10:11:29 INFO  - [startNewGame] : Exception : Invalid player list
+2019-05-06 10:11:29 INFO  - [startNewGame] : EXIT
+2019-05-06 10:11:29 INFO  - [startNewGame] : START
+2019-05-06 10:11:29 INFO  - [startNewGame] : EXIT
+2019-05-06 10:11:29 INFO  - [printPlayersName] START , PLAYER 1 : SP, PLAYER 2 : SP
+2019-05-06 10:11:29 INFO  - [printPlayersName] EXIT
+2019-05-06 10:11:29 INFO  - [getPlayerNames] START
+2019-05-06 10:11:29 INFO  - [getPlayerNames] EXIT , names : [sp, sp]
+2019-05-06 10:11:29 INFO  - [printTitle] START
+2019-05-06 10:11:29 INFO  - [printTitle] EXIT
+2019-05-06 10:11:29 INFO  - [printActions] START
+2019-05-06 10:11:29 INFO  - [printActions] START, PLAYER : Players Detail: 
+ 1.Name P1 : sp, Health P1 : 0, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : sp, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0
+2019-05-06 10:11:29 INFO  - [decideWinnerAndContinue] START , playerData : Players Detail: 
+ 1.Name P1 : sp, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : sp, Health P2 : 0, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0
+2019-05-06 10:11:29 INFO  - [decideWinnerAndContinue] EXIT 
+2019-05-06 10:11:29 INFO  - [decideWinnerAndContinue] START , playerData : Players Detail: 
+ 1.Name P1 : sp, Health P1 : 0, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : sp, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0
+2019-05-06 10:11:29 INFO  - [decideWinnerAndContinue] EXIT 
+2019-05-06 10:11:29 INFO  - [explorePlayer] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 3
+2019-05-06 10:11:29 INFO  - [explorePlayer] EXIT
+2019-05-06 10:11:29 INFO  - [loadGame] START
+2019-05-06 10:11:30 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : ss, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : ss, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [hitPunch] START , playerData : Players Detail: 
+ 1.Name P1 : ss, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : ss, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 1
+2019-05-06 10:11:30 INFO  - [hitPunch] EXIT 
+2019-05-06 10:11:30 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : ss, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : ss, Health P2 : 95, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [loadGame] EXIT
+2019-05-06 10:11:30 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [hitPunch] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 5
+2019-05-06 10:11:30 INFO  - [hitPunch] EXIT 
+2019-05-06 10:11:30 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 95, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [fireShortGun] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 14
+2019-05-06 10:11:30 INFO  - [fireShortGun] EXIT
+2019-05-06 10:11:30 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 85, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [saveGame] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0
+2019-05-06 10:11:30 INFO  - [saveGame] EXIT
+2019-05-06 10:11:30 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : false
+2019-05-06 10:11:30 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [fireShortGun] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 12
+2019-05-06 10:11:30 INFO  - [fireShortGun] EXIT
+2019-05-06 10:11:30 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 85, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [fireBigGun] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,userInput : 13
+2019-05-06 10:11:30 INFO  - [fireBigGun] EXIT 
+2019-05-06 10:11:30 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 75, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [boostEnergy] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 8
+2019-05-06 10:11:30 INFO  - [boostEnergy] EXIT 
+2019-05-06 10:11:30 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 150, Gold P2 : 1000, EnergyDrink P2 : 4, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [explorePlayer] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 7
+2019-05-06 10:11:30 INFO  - [explorePlayer] EXIT
+2019-05-06 10:11:30 INFO  - [explorePlayer] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 7
+2019-05-06 10:11:30 INFO  - [explorePlayer] EXIT
+2019-05-06 10:11:30 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [boostEnergy] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 4
+2019-05-06 10:11:30 INFO  - [boostEnergy] EXIT 
+2019-05-06 10:11:30 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 150, Gold P1 : 1000, EnergyDrink P1 : 4, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [hitKick] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 2
+2019-05-06 10:11:30 INFO  - [hitKick] EXIT
+2019-05-06 10:11:30 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 90, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [hitKick] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 6
+2019-05-06 10:11:30 INFO  - [hitKick] EXIT
+2019-05-06 10:11:30 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 90, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [explorePlayer] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 3
+2019-05-06 10:11:30 INFO  - [explorePlayer] EXIT
+2019-05-06 10:11:30 INFO  - [explorePlayer] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 7
+2019-05-06 10:11:30 INFO  - [explorePlayer] EXIT
+2019-05-06 10:11:30 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [fireBigGun] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,userInput : 15
+2019-05-06 10:11:30 INFO  - [fireBigGun] EXIT 
+2019-05-06 10:11:30 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 75, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [explorePlayer] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 3
+2019-05-06 10:11:30 INFO  - [explorePlayer] EXIT
+2019-05-06 10:11:30 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:11:30 INFO  - [hitPunch] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 1
+2019-05-06 10:11:30 INFO  - [hitPunch] EXIT 
+2019-05-06 10:11:30 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 95, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:19:27 INFO  - [printTitle] START
+2019-05-06 10:19:27 INFO  - [printTitle] EXIT
+2019-05-06 10:19:32 INFO  - [startGame] userInput : 1
+2019-05-06 10:19:32 INFO  - [startNewGame] : START
+2019-05-06 10:19:32 INFO  - [getPlayerNames] START
+2019-05-06 10:19:34 INFO  - [getPlayerNames] EXIT , names : [kak, as]
+2019-05-06 10:19:34 INFO  - [printPlayersName] START , PLAYER 1 : KAK, PLAYER 2 : AS
+2019-05-06 10:19:34 INFO  - [printPlayersName] EXIT
+2019-05-06 10:19:34 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : kak, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : as, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:19:34 INFO  - [printActions] START
+2019-05-06 10:19:34 INFO  - [printActions] START, PLAYER : Players Detail: 
+ 1.Name P1 : kak, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : as, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0
+2019-05-06 10:19:37 INFO  - [saveGame] START , Player : Players Detail: 
+ 1.Name P1 : kak, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : as, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0
+2019-05-06 10:19:38 INFO  - [saveGame] EXIT
+2019-05-06 10:19:38 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : kak, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : as, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : false
+2019-05-06 10:19:38 INFO  - [decideWinnerAndContinue] START , playerData : Players Detail: 
+ 1.Name P1 : kak, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : as, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0
+2019-05-06 10:19:38 INFO  - [decideWinnerAndContinue] EXIT 
+2019-05-06 10:19:38 INFO  - [startNewGame] : EXIT
+2019-05-06 10:19:48 INFO  - [printTitle] START
+2019-05-06 10:19:48 INFO  - [printTitle] EXIT
+2019-05-06 10:19:52 INFO  - [startGame] userInput : 2
+2019-05-06 10:19:52 INFO  - [startNewGame] : START
+2019-05-06 10:19:52 INFO  - [loadGame] START
+2019-05-06 10:22:50 INFO  - [startGame] userInput : 2
+2019-05-06 10:22:50 INFO  - [startGame] userInput : 1
+2019-05-06 10:22:50 INFO  - [startGame] userInput : 3
+2019-05-06 10:22:50 ERROR - [startGame] Exception : null
+2019-05-06 10:22:50 INFO  - [startGame] userInput : 3
+2019-05-06 10:22:50 ERROR - [startGame] Exception : null
+2019-05-06 10:22:50 INFO  - [startGame] userInput : 3
+2019-05-06 10:22:50 ERROR - [startGame] Exception : null
+2019-05-06 10:22:50 INFO  - [startNewGame] : START
+2019-05-06 10:22:50 INFO  - [startNewGame] : EXIT , isLoadedSuccessfully : true
+2019-05-06 10:22:50 INFO  - [startNewGame] : START
+2019-05-06 10:22:50 INFO  - [startNewGame] : Exception : Invalid player list
+2019-05-06 10:22:50 INFO  - [startNewGame] : EXIT
+2019-05-06 10:22:50 INFO  - [startNewGame] : START
+2019-05-06 10:22:50 INFO  - [startNewGame] : EXIT
+2019-05-06 10:22:50 INFO  - [printPlayersName] START , PLAYER 1 : SP, PLAYER 2 : SP
+2019-05-06 10:22:50 INFO  - [printPlayersName] EXIT
+2019-05-06 10:22:51 INFO  - [getPlayerNames] START
+2019-05-06 10:22:51 INFO  - [getPlayerNames] EXIT , names : [sp, sp]
+2019-05-06 10:22:51 INFO  - [printTitle] START
+2019-05-06 10:22:51 INFO  - [printTitle] EXIT
+2019-05-06 10:22:51 INFO  - [printActions] START
+2019-05-06 10:22:51 INFO  - [printActions] START, PLAYER : Players Detail: 
+ 1.Name P1 : sp, Health P1 : 0, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : sp, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0
+2019-05-06 10:22:51 INFO  - [decideWinnerAndContinue] START , playerData : Players Detail: 
+ 1.Name P1 : sp, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : sp, Health P2 : 0, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0
+2019-05-06 10:22:51 INFO  - [decideWinnerAndContinue] EXIT 
+2019-05-06 10:22:51 INFO  - [decideWinnerAndContinue] START , playerData : Players Detail: 
+ 1.Name P1 : sp, Health P1 : 0, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : sp, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0
+2019-05-06 10:22:51 INFO  - [decideWinnerAndContinue] EXIT 
+2019-05-06 10:22:51 INFO  - [explorePlayer] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 3
+2019-05-06 10:22:51 INFO  - [explorePlayer] EXIT
+2019-05-06 10:22:51 INFO  - [loadGame] START
+2019-05-06 10:22:51 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : sumit, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : UV, Health P2 : 95, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [hitPunch] START , playerData : Players Detail: 
+ 1.Name P1 : sumit, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : UV, Health P2 : 95, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 1
+2019-05-06 10:22:51 INFO  - [hitPunch] EXIT 
+2019-05-06 10:22:51 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : sumit, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : UV, Health P2 : 90, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [loadGame] EXIT
+2019-05-06 10:22:51 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [hitPunch] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 5
+2019-05-06 10:22:51 INFO  - [hitPunch] EXIT 
+2019-05-06 10:22:51 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 95, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [fireShortGun] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 14
+2019-05-06 10:22:51 INFO  - [fireShortGun] EXIT
+2019-05-06 10:22:51 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 85, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [saveGame] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0
+2019-05-06 10:22:51 INFO  - [saveGame] EXIT
+2019-05-06 10:22:51 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : false
+2019-05-06 10:22:51 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [fireShortGun] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 12
+2019-05-06 10:22:51 INFO  - [fireShortGun] EXIT
+2019-05-06 10:22:51 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 85, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [fireBigGun] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,userInput : 13
+2019-05-06 10:22:51 INFO  - [fireBigGun] EXIT 
+2019-05-06 10:22:51 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 75, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [boostEnergy] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 8
+2019-05-06 10:22:51 INFO  - [boostEnergy] EXIT 
+2019-05-06 10:22:51 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 150, Gold P2 : 1000, EnergyDrink P2 : 4, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [explorePlayer] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 7
+2019-05-06 10:22:51 INFO  - [explorePlayer] EXIT
+2019-05-06 10:22:51 INFO  - [explorePlayer] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 7
+2019-05-06 10:22:51 INFO  - [explorePlayer] EXIT
+2019-05-06 10:22:51 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [boostEnergy] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 4
+2019-05-06 10:22:51 INFO  - [boostEnergy] EXIT 
+2019-05-06 10:22:51 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 150, Gold P1 : 1000, EnergyDrink P1 : 4, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [hitKick] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 2
+2019-05-06 10:22:51 INFO  - [hitKick] EXIT
+2019-05-06 10:22:51 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 90, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [hitKick] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 6
+2019-05-06 10:22:51 INFO  - [hitKick] EXIT
+2019-05-06 10:22:51 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 90, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [explorePlayer] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 3
+2019-05-06 10:22:51 INFO  - [explorePlayer] EXIT
+2019-05-06 10:22:51 INFO  - [explorePlayer] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 7
+2019-05-06 10:22:51 INFO  - [explorePlayer] EXIT
+2019-05-06 10:22:51 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [fireBigGun] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,userInput : 15
+2019-05-06 10:22:51 INFO  - [fireBigGun] EXIT 
+2019-05-06 10:22:51 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 75, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [explorePlayer] START , Player : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 3
+2019-05-06 10:22:51 INFO  - [explorePlayer] EXIT
+2019-05-06 10:22:51 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-06 10:22:51 INFO  - [hitPunch] START , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 1
+2019-05-06 10:22:51 INFO  - [hitPunch] EXIT 
+2019-05-06 10:22:51 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : P2, Health P2 : 95, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true

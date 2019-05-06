@@ -1,2 +1,4 @@
 { "pName" : "sumit" ,"pHealth" : 100 ,"pGold" : 1000,"pEnergyDrink" : 5 ,"pShortGun" : 0 ,"pBigGun" : 0,"eName" : "UV" ,"eHealth" : 95 ,"eGold" : 1000,"eEnergyDrink" : 5 ,"eShortGun" : 0 ,"eBigGun" : 0,"gameName" : "newGame"}
  
+{ "pName" : "kak" ,"pHealth" : 100 ,"pGold" : 1000,"pEnergyDrink" : 5 ,"pShortGun" : 0 ,"pBigGun" : 0,"eName" : "as" ,"eHealth" : 100 ,"eGold" : 1000,"eEnergyDrink" : 5 ,"eShortGun" : 0 ,"eBigGun" : 0,"gameName" : "ww"}
+{ "pName" : "P1" ,"pHealth" : 100 ,"pGold" : 1000,"pEnergyDrink" : 5 ,"pShortGun" : 0 ,"pBigGun" : 0,"eName" : "P2" ,"eHealth" : 100 ,"eGold" : 1000,"eEnergyDrink" : 5 ,"eShortGun" : 0 ,"eBigGun" : 0,"gameName" : "null"}
