@@ -191,7 +191,7 @@ public class PlayerActions {
 			_log.info("Select Number to Load Game : ");
 			for (Player player : listData) {
 				mapOfSavedGames.put(count, player);
-				if(player.getGameName() != null || player.getGameName().equalsIgnoreCase("null")){
+				if(player.getGameName() != null && player.getGameName().equalsIgnoreCase("null")){
 					_log.info(count + " : " + player.getGameName());
 					count++;
 				}
