@@ -25,7 +25,7 @@ public class Application {
 	private static CommonUtil commonUtil = new CommonUtil();
 
 	public static void main(String[] args) {
-		PropertyConfigurator.configure(CommonUtil.getFilePath("log4j.properties"));
+		PropertyConfigurator.configure(CommonUtil.getFilePath(IConstants.File.NAME_LOG4J));
 		ConfigurableApplicationContext context = new SpringApplicationBuilder(
 				Application.class).headless(false).run(args);
 		FightGameController game = context.getBean(FightGameController.class);

@@ -8,18 +8,19 @@ import java.io.IOException;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+import org.apache.log4j.Logger;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import com.example.coding.model.Player;
 
 public class ReadWrite {
 
-	private static final String fileName = "myObjects.txt";
+	private static Logger _log = Logger.getLogger(ReadWrite.class);
 
 	public static void writeData(Player p) throws IOException {
 		String textToAppend = getJson(p);
 		BufferedWriter writer = new BufferedWriter(new FileWriter(
-				fileName, true));
+				IConstants.File.NAME, true));
 		writer.newLine();
 		writer.write(textToAppend);
 		writer.close();
@@ -31,11 +32,10 @@ public class ReadWrite {
 		String ob = "";
 		Set<Player> list = new LinkedHashSet<>();
 		try {
-			file = new File(fileName);
+			file = new File(IConstants.File.NAME);
 			reader = new FileReader(file);
 			int i;
 			while ((i = reader.read()) != -1) {
-				// System.out.print((char) i);
 				if ((char) i == '\n')
 					ob = "";
 				else {
@@ -48,18 +48,15 @@ public class ReadWrite {
 					}
 				}
 			}
-			// System.out.println();
-			// System.out.println("Set size : " + list.size() + " ,Set  : " +
-			// list);
 		} catch (Exception e) {
-			System.out.println(e);
+			_log.error(e.getMessage());
 		} finally {
 			try {
 				if (reader != null) {
 					reader.close();
 				}
 			} catch (Exception e) {
-				System.out.println(e);
+				_log.error(e.getMessage());
 			}
 		}
 		return list;

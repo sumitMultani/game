@@ -35,4 +35,9 @@ public interface IConstants {
 		String SUCCESS = "GAME FINISHED SUCCESSFULLY.";
 		String FAIL = "GAME FAILED TO START DUE TO WRONG SELECTED VALUE.";
 	}
+	
+	interface File {
+		String NAME = "myObjects.txt";
+		String NAME_LOG4J = "log4j.properties";
+	}
 }
