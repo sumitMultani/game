@@ -25,7 +25,6 @@ public class FightGameServiceImpl implements FightGameService {
 	
 	@Override
 	public boolean startNewGame() {
-		_log.info("[startNewGame] : START");
 		boolean isStartSuccess = true;
 		try{
 			List<String> playerNames = commonUtil.getPlayerNames();
@@ -38,7 +37,6 @@ public class FightGameServiceImpl implements FightGameService {
 			}
 		}catch(Exception ex){
 			_log.info("[startNewGame] : Exception : "+ex.getMessage());
-			System.out.println("Error : "+ex);
 			isStartSuccess = false;
 		}
 		_log.info("[startNewGame] : EXIT");
@@ -48,14 +46,12 @@ public class FightGameServiceImpl implements FightGameService {
 
 	@Override
 	public boolean loadGame() {
-		_log.info("[startNewGame] : START");
 		boolean isLoadSuccess = true;
 		try{
 			isLoadSuccess = playerActions.loadGame();
 		}catch(Exception ex){
 			isLoadSuccess = false;
 		}
-		_log.info("[startNewGame] : EXIT , isLoadedSuccessfully : "+isLoadSuccess);
 		return isLoadSuccess;
 	}
 	 

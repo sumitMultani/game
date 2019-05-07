@@ -579,3 +579,269 @@
 2019-05-06 10:22:51 INFO  - [performActions] EXIT , playerData : Players Detail: 
  1.Name P1 : P1, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
  2.Name P2 : P2, Health P2 : 95, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-07 06:55:39 INFO  - [printTitle] START
+2019-05-07 06:55:39 INFO  - [printTitle] EXIT
+2019-05-07 06:55:42 INFO  - [startGame] userInput : 2
+2019-05-07 06:55:42 INFO  - [startNewGame] : START
+2019-05-07 06:55:42 INFO  - [loadGame] START
+2019-05-07 06:56:16 INFO  - [printTitle] START
+2019-05-07 06:56:16 INFO  - [printTitle] EXIT
+2019-05-07 06:56:24 INFO  - [startGame] userInput : 2
+2019-05-07 06:56:24 INFO  - [startNewGame] : START
+2019-05-07 06:56:24 INFO  - [loadGame] START
+2019-05-07 06:56:32 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : sumit, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : UV, Health P2 : 95, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-07 06:56:32 INFO  - [printActions] START
+2019-05-07 06:56:32 INFO  - [printActions] START, PLAYER : Players Detail: 
+ 1.Name P1 : sumit, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : UV, Health P2 : 95, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0
+2019-05-07 06:56:48 INFO  - [hitPunch] START , playerData : Players Detail: 
+ 1.Name P1 : sumit, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : UV, Health P2 : 95, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 , userInput : 5
+2019-05-07 06:56:48 INFO  - [hitPunch] EXIT 
+2019-05-07 06:56:48 INFO  - [performActions] EXIT , playerData : Players Detail: 
+ 1.Name P1 : sumit, Health P1 : 95, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : UV, Health P2 : 95, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-07 06:56:48 INFO  - [decideWinnerAndContinue] START , playerData : Players Detail: 
+ 1.Name P1 : sumit, Health P1 : 95, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : UV, Health P2 : 95, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0
+2019-05-07 06:56:48 INFO  - [decideWinnerAndContinue] EXIT 
+2019-05-07 06:56:48 INFO  - [performActions] START , playerData : Players Detail: 
+ 1.Name P1 : sumit, Health P1 : 95, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : UV, Health P2 : 95, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0 ,isPlay : true
+2019-05-07 06:56:48 INFO  - [printActions] START
+2019-05-07 06:56:48 INFO  - [printActions] START, PLAYER : Players Detail: 
+ 1.Name P1 : sumit, Health P1 : 95, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : UV, Health P2 : 95, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0
+2019-05-07 07:15:08 INFO  -  ________  _________  ________  _______   _______  _________        ________ ___  ________  ___  ___  _________  _______   ________          ___  ___
+2019-05-07 07:15:08 INFO  - |\   ____\|\___   ___|\   __  \|\  ___ \ |\  ___ \|\___   ___\     |\  _____|\  \|\   ____\|\  \|\  \|\___   ___|\  ___ \ |\   __  \        |\  \|\  \ 
+2019-05-07 07:15:08 INFO  - \ \  \___|\|___ \  \_\ \  \|\  \ \   __/|\ \   __/\|___ \  \_|     \ \  \__/\ \  \ \  \___|\ \  \\\  \|___ \  \_\ \   __/|\ \  \|\  \       \ \  \ \  \  
+2019-05-07 07:15:08 INFO  -  \ \_____  \   \ \  \ \ \   _  _\ \  \_|/_\ \  \_|/__  \ \  \       \ \   __\\ \  \ \  \  __\ \   __  \   \ \  \ \ \  \_|/_\ \   _  _\       \ \  \ \  \  
+2019-05-07 07:15:08 INFO  -   \|____|\  \   \ \  \ \ \  \\  \\ \  \_|\ \ \  \_|\ \  \ \  \       \ \  \_| \ \  \ \  \|\  \ \  \ \  \   \ \  \ \ \  \_|\ \ \  \\  \|       \ \  \ \  \ 
+2019-05-07 07:15:08 INFO  -     ____\_\  \   \ \__\ \ \__\\ _\\ \_______\ \_______\  \ \__\       \ \__\   \ \__\ \_______\ \__\ \__\   \ \__\ \ \_______\ \__\\ _\        \ \__\ \__\
+2019-05-07 07:15:08 INFO  -    |\_________\   \|__|  \|__|\|__|\|_______|\|_______|   \|__|        \|__|    \|__|\|_______|\|__|\|__|    \|__|  \|_______|\|__|\|__|        \|__|\|__|
+2019-05-07 07:15:08 INFO  -    \|_________|                                                                                                                                           
+2019-05-07 07:15:08 INFO  - =================================================
+2019-05-07 07:15:08 INFO  - WELCOME! GAME SELECTION...
+2019-05-07 07:15:08 INFO  - 1. Start a New Game
+2. Load Game
+2019-05-07 07:15:08 INFO  - =================================================
+2019-05-07 07:15:08 INFO  - (Select 1 or 2) : 
+2019-05-07 07:15:08 INFO  - [printTitle] EXIT
+2019-05-07 07:15:57 INFO  -  ________  _________  ________  _______   _______  _________        ________ ___  ________  ___  ___  _________  _______   ________          ___  ___
+2019-05-07 07:15:57 INFO  - |\   ____\|\___   ___|\   __  \|\  ___ \ |\  ___ \|\___   ___\     |\  _____|\  \|\   ____\|\  \|\  \|\___   ___|\  ___ \ |\   __  \        |\  \|\  \ 
+2019-05-07 07:15:57 INFO  - \ \  \___|\|___ \  \_\ \  \|\  \ \   __/|\ \   __/\|___ \  \_|     \ \  \__/\ \  \ \  \___|\ \  \\\  \|___ \  \_\ \   __/|\ \  \|\  \       \ \  \ \  \  
+2019-05-07 07:15:57 INFO  -  \ \_____  \   \ \  \ \ \   _  _\ \  \_|/_\ \  \_|/__  \ \  \       \ \   __\\ \  \ \  \  __\ \   __  \   \ \  \ \ \  \_|/_\ \   _  _\       \ \  \ \  \  
+2019-05-07 07:15:57 INFO  -   \|____|\  \   \ \  \ \ \  \\  \\ \  \_|\ \ \  \_|\ \  \ \  \       \ \  \_| \ \  \ \  \|\  \ \  \ \  \   \ \  \ \ \  \_|\ \ \  \\  \|       \ \  \ \  \ 
+2019-05-07 07:15:57 INFO  -     ____\_\  \   \ \__\ \ \__\\ _\\ \_______\ \_______\  \ \__\       \ \__\   \ \__\ \_______\ \__\ \__\   \ \__\ \ \_______\ \__\\ _\        \ \__\ \__\
+2019-05-07 07:15:57 INFO  -    |\_________\   \|__|  \|__|\|__|\|_______|\|_______|   \|__|        \|__|    \|__|\|_______|\|__|\|__|    \|__|  \|_______|\|__|\|__|        \|__|\|__|
+2019-05-07 07:15:57 INFO  -    \|_________|                                                                                                                                           
+2019-05-07 07:15:57 INFO  - =================================================
+2019-05-07 07:15:57 INFO  - WELCOME! GAME SELECTION...
+2019-05-07 07:15:57 INFO  - 1. Start a New Game
+2. Load Game
+2019-05-07 07:15:57 INFO  - =================================================
+2019-05-07 07:15:57 INFO  - (Select 1 or 2) : 
+2019-05-07 07:15:57 INFO  - [printTitle] EXIT
+2019-05-07 07:16:18 INFO  -  ________  _________  ________  _______   _______  _________        ________ ___  ________  ___  ___  _________  _______   ________          ___  ___
+2019-05-07 07:16:18 INFO  - |\   ____\|\___   ___|\   __  \|\  ___ \ |\  ___ \|\___   ___\     |\  _____|\  \|\   ____\|\  \|\  \|\___   ___|\  ___ \ |\   __  \        |\  \|\  \ 
+2019-05-07 07:16:18 INFO  - \ \  \___|\|___ \  \_\ \  \|\  \ \   __/|\ \   __/\|___ \  \_|     \ \  \__/\ \  \ \  \___|\ \  \\\  \|___ \  \_\ \   __/|\ \  \|\  \       \ \  \ \  \  
+2019-05-07 07:16:18 INFO  -  \ \_____  \   \ \  \ \ \   _  _\ \  \_|/_\ \  \_|/__  \ \  \       \ \   __\\ \  \ \  \  __\ \   __  \   \ \  \ \ \  \_|/_\ \   _  _\       \ \  \ \  \  
+2019-05-07 07:16:18 INFO  -   \|____|\  \   \ \  \ \ \  \\  \\ \  \_|\ \ \  \_|\ \  \ \  \       \ \  \_| \ \  \ \  \|\  \ \  \ \  \   \ \  \ \ \  \_|\ \ \  \\  \|       \ \  \ \  \ 
+2019-05-07 07:16:18 INFO  -     ____\_\  \   \ \__\ \ \__\\ _\\ \_______\ \_______\  \ \__\       \ \__\   \ \__\ \_______\ \__\ \__\   \ \__\ \ \_______\ \__\\ _\        \ \__\ \__\
+2019-05-07 07:16:18 INFO  -    |\_________\   \|__|  \|__|\|__|\|_______|\|_______|   \|__|        \|__|    \|__|\|_______|\|__|\|__|    \|__|  \|_______|\|__|\|__|        \|__|\|__|
+2019-05-07 07:16:18 INFO  -    \|_________|                                                                                                                                           
+2019-05-07 07:16:18 INFO  - =================================================
+2019-05-07 07:16:18 INFO  - WELCOME! GAME SELECTION...
+2019-05-07 07:16:18 INFO  - 1. Start a New Game
+2. Load Game
+2019-05-07 07:16:18 INFO  - =================================================
+2019-05-07 07:16:18 INFO  - (Select 1 or 2) : 
+2019-05-07 07:16:18 INFO  - [printTitle] EXIT
+2019-05-07 07:19:34 INFO  -  ________  _________  ________  _______   _______  _________        ________ ___  ________  ___  ___  _________  _______   ________          ___  ___
+2019-05-07 07:19:34 INFO  - |\   ____\|\___   ___|\   __  \|\  ___ \ |\  ___ \|\___   ___\     |\  _____|\  \|\   ____\|\  \|\  \|\___   ___|\  ___ \ |\   __  \        |\  \|\  \ 
+2019-05-07 07:19:34 INFO  - \ \  \___|\|___ \  \_\ \  \|\  \ \   __/|\ \   __/\|___ \  \_|     \ \  \__/\ \  \ \  \___|\ \  \\\  \|___ \  \_\ \   __/|\ \  \|\  \       \ \  \ \  \  
+2019-05-07 07:19:34 INFO  -  \ \_____  \   \ \  \ \ \   _  _\ \  \_|/_\ \  \_|/__  \ \  \       \ \   __\\ \  \ \  \  __\ \   __  \   \ \  \ \ \  \_|/_\ \   _  _\       \ \  \ \  \  
+2019-05-07 07:19:34 INFO  -   \|____|\  \   \ \  \ \ \  \\  \\ \  \_|\ \ \  \_|\ \  \ \  \       \ \  \_| \ \  \ \  \|\  \ \  \ \  \   \ \  \ \ \  \_|\ \ \  \\  \|       \ \  \ \  \ 
+2019-05-07 07:19:34 INFO  -     ____\_\  \   \ \__\ \ \__\\ _\\ \_______\ \_______\  \ \__\       \ \__\   \ \__\ \_______\ \__\ \__\   \ \__\ \ \_______\ \__\\ _\        \ \__\ \__\
+2019-05-07 07:19:34 INFO  -    |\_________\   \|__|  \|__|\|__|\|_______|\|_______|   \|__|        \|__|    \|__|\|_______|\|__|\|__|    \|__|  \|_______|\|__|\|__|        \|__|\|__|
+2019-05-07 07:19:34 INFO  -    \|_________|                                                                                                                                           
+2019-05-07 07:19:34 INFO  - =================================================
+2019-05-07 07:19:34 INFO  - WELCOME! GAME SELECTION...
+2019-05-07 07:19:34 INFO  - 1. Start a New Game
+2. Load Game
+2019-05-07 07:19:34 INFO  - =================================================
+2019-05-07 07:19:34 INFO  - (Select 1 or 2) : 
+2019-05-07 07:19:38 INFO  - Select Number to Load Game : 
+2019-05-07 07:19:38 INFO  - 1 : newGame
+2019-05-07 07:20:38 INFO  - user input : 1
+2019-05-07 07:20:38 INFO  - saved Game Start...
+2019-05-07 07:20:38 INFO  - Players Detail: 
+ 1.Name P1 : sumit, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : UV, Health P2 : 95, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0
+2019-05-07 07:20:38 INFO  - =================================================
+2019-05-07 07:20:38 INFO  - Points :
+2019-05-07 07:20:38 INFO  - [Punch = -5, Kick = -10, Explore = Buy Products, Energy = +50]
+2019-05-07 07:20:38 INFO  - =================================================
+2019-05-07 07:20:38 INFO  - What do you want to do ?
+2019-05-07 07:20:38 INFO  - 1. Punch by P1
+2019-05-07 07:20:38 INFO  - 2. Kick by P1
+2019-05-07 07:20:38 INFO  - 3. Explore P1
+2019-05-07 07:20:38 INFO  - 4. Boost Energy P1
+2019-05-07 07:20:38 INFO  - 5. Punch by P2
+2019-05-07 07:20:38 INFO  - 6. Kick by P2
+2019-05-07 07:20:38 INFO  - 7. Explore  P2
+2019-05-07 07:20:38 INFO  - 8. Boost Energy P2
+2019-05-07 07:20:38 INFO  - 9. Save And Exit Game
+2019-05-07 07:20:38 INFO  - 10. Open Saved Games
+2019-05-07 07:20:38 INFO  - 11. Exit
+2019-05-07 07:20:49 INFO  - user input : 2
+2019-05-07 07:20:49 INFO  - Players Detail: 
+ 1.Name P1 : sumit, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : UV, Health P2 : 85, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0
+2019-05-07 07:20:49 INFO  - =================================================
+2019-05-07 07:20:49 INFO  - Points :
+2019-05-07 07:20:49 INFO  - [Punch = -5, Kick = -10, Explore = Buy Products, Energy = +50]
+2019-05-07 07:20:49 INFO  - =================================================
+2019-05-07 07:20:49 INFO  - What do you want to do ?
+2019-05-07 07:20:49 INFO  - 1. Punch by P1
+2019-05-07 07:20:49 INFO  - 2. Kick by P1
+2019-05-07 07:20:49 INFO  - 3. Explore P1
+2019-05-07 07:20:49 INFO  - 4. Boost Energy P1
+2019-05-07 07:20:49 INFO  - 5. Punch by P2
+2019-05-07 07:20:49 INFO  - 6. Kick by P2
+2019-05-07 07:20:49 INFO  - 7. Explore  P2
+2019-05-07 07:20:49 INFO  - 8. Boost Energy P2
+2019-05-07 07:20:49 INFO  - 9. Save And Exit Game
+2019-05-07 07:20:49 INFO  - 10. Open Saved Games
+2019-05-07 07:20:49 INFO  - 11. Exit
+2019-05-07 07:22:39 ERROR - [startGame] Exception : null
+2019-05-07 07:22:39 INFO  - [startGame] Run Again..
+2019-05-07 07:22:39 ERROR - [startGame] Exception : null
+2019-05-07 07:22:39 INFO  - [startGame] Run Again..
+2019-05-07 07:22:39 ERROR - [startGame] Exception : null
+2019-05-07 07:22:39 INFO  - [startGame] Run Again..
+2019-05-07 07:22:39 INFO  - [startNewGame] : Exception : Invalid player list
+2019-05-07 07:22:39 INFO  - [startNewGame] : EXIT
+2019-05-07 07:22:39 INFO  - [startNewGame] : EXIT
+2019-05-07 07:22:39 INFO  - =======================START FIGHT===============================
+2019-05-07 07:22:39 INFO  - ***********************  SP vs SP  ******************
+2019-05-07 07:22:39 INFO  - =================================================
+2019-05-07 07:22:39 INFO  - ======***==Create Characters By Name===***=======
+2019-05-07 07:22:39 INFO  - Enter Player1 Name : 
+2019-05-07 07:22:39 INFO  - Enter Player2 Name : 
+2019-05-07 07:22:39 INFO  - Players Detail: 
+ 1.Name P1 : sp, Health P1 : 0, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : sp, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0
+2019-05-07 07:22:39 INFO  -  ________  _________  ________  _______   _______  _________        ________ ___  ________  ___  ___  _________  _______   ________          ___  ___
+2019-05-07 07:22:39 INFO  - |\   ____\|\___   ___|\   __  \|\  ___ \ |\  ___ \|\___   ___\     |\  _____|\  \|\   ____\|\  \|\  \|\___   ___|\  ___ \ |\   __  \        |\  \|\  \ 
+2019-05-07 07:22:39 INFO  - \ \  \___|\|___ \  \_\ \  \|\  \ \   __/|\ \   __/\|___ \  \_|     \ \  \__/\ \  \ \  \___|\ \  \\\  \|___ \  \_\ \   __/|\ \  \|\  \       \ \  \ \  \  
+2019-05-07 07:22:39 INFO  -  \ \_____  \   \ \  \ \ \   _  _\ \  \_|/_\ \  \_|/__  \ \  \       \ \   __\\ \  \ \  \  __\ \   __  \   \ \  \ \ \  \_|/_\ \   _  _\       \ \  \ \  \  
+2019-05-07 07:22:39 INFO  -   \|____|\  \   \ \  \ \ \  \\  \\ \  \_|\ \ \  \_|\ \  \ \  \       \ \  \_| \ \  \ \  \|\  \ \  \ \  \   \ \  \ \ \  \_|\ \ \  \\  \|       \ \  \ \  \ 
+2019-05-07 07:22:39 INFO  -     ____\_\  \   \ \__\ \ \__\\ _\\ \_______\ \_______\  \ \__\       \ \__\   \ \__\ \_______\ \__\ \__\   \ \__\ \ \_______\ \__\\ _\        \ \__\ \__\
+2019-05-07 07:22:39 INFO  -    |\_________\   \|__|  \|__|\|__|\|_______|\|_______|   \|__|        \|__|    \|__|\|_______|\|__|\|__|    \|__|  \|_______|\|__|\|__|        \|__|\|__|
+2019-05-07 07:22:39 INFO  -    \|_________|                                                                                                                                           
+2019-05-07 07:22:39 INFO  - =================================================
+2019-05-07 07:22:39 INFO  - WELCOME! GAME SELECTION...
+2019-05-07 07:22:39 INFO  - 1. Start a New Game
+2. Load Game
+2019-05-07 07:22:39 INFO  - =================================================
+2019-05-07 07:22:39 INFO  - (Select 1 or 2) : 
+2019-05-07 07:22:39 INFO  - =================================================
+2019-05-07 07:22:39 INFO  - Points :
+2019-05-07 07:22:39 INFO  - [Punch = -5, Kick = -10, Explore = Buy Products, Energy = +50]
+2019-05-07 07:22:39 INFO  - =================================================
+2019-05-07 07:22:39 INFO  - What do you want to do ?
+2019-05-07 07:22:39 INFO  - 1. Punch by P1
+2019-05-07 07:22:39 INFO  - 2. Kick by P1
+2019-05-07 07:22:39 INFO  - 3. Explore P1
+2019-05-07 07:22:39 INFO  - 4. Boost Energy P1
+2019-05-07 07:22:39 INFO  - 5. Punch by P2
+2019-05-07 07:22:39 INFO  - 6. Kick by P2
+2019-05-07 07:22:39 INFO  - 7. Explore  P2
+2019-05-07 07:22:39 INFO  - 8. Boost Energy P2
+2019-05-07 07:22:39 INFO  - 9. Save And Exit Game
+2019-05-07 07:22:39 INFO  - 10. Open Saved Games
+2019-05-07 07:22:39 INFO  - 11. Exit
+2019-05-07 07:22:39 INFO  - =================================================
+2019-05-07 07:22:39 INFO  - SP IS WINNER.
+2019-05-07 07:22:39 INFO  - GAME FINISHED.
+2019-05-07 07:22:39 INFO  - =================================================
+2019-05-07 07:22:39 INFO  - Do you want to Continue The Game? 
+2019-05-07 07:22:39 INFO  - 1. YES
+2019-05-07 07:22:39 INFO  - 2. NO
+2019-05-07 07:22:39 INFO  - (Select 1 or 2)
+2019-05-07 07:22:39 INFO  - user input : 1
+2019-05-07 07:22:39 INFO  - Players Detail: 
+ 1.Name P1 : sp, Health P1 : 200, Gold P1 : 1500, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : sp, Health P2 : 100, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0
+2019-05-07 07:22:39 INFO  - =================================================
+2019-05-07 07:22:39 INFO  - SP IS WINNER.
+2019-05-07 07:22:39 INFO  - GAME FINISHED.
+2019-05-07 07:22:39 INFO  - =================================================
+2019-05-07 07:22:39 INFO  - Do you want to Continue The Game? 
+2019-05-07 07:22:39 INFO  - 1. YES
+2019-05-07 07:22:39 INFO  - 2. NO
+2019-05-07 07:22:39 INFO  - (Select 1 or 2)
+2019-05-07 07:22:39 INFO  - user input : 1
+2019-05-07 07:22:40 INFO  - What do you want to buy?
+2019-05-07 07:22:40 INFO  - 1. Energy Drink.
+2019-05-07 07:22:40 INFO  - 2. short Gun [Cost : 100 Gold]
+2019-05-07 07:22:40 INFO  - 3. big Gun [Cost : 200 Gold]
+2019-05-07 07:22:40 INFO  - 4. Don't want to Buy Anything.
+2019-05-07 07:22:40 INFO  - user input : 1
+2019-05-07 07:22:40 INFO  - How Many Drink you want to buy (50 gold per piece) : 
+2019-05-07 07:22:40 INFO  - user input : 1
+2019-05-07 07:22:40 INFO  - Purchased successfully.
+2019-05-07 07:22:40 INFO  - Select Number to Load Game : 
+2019-05-07 07:22:40 INFO  - 1 : newGame
+2019-05-07 07:22:40 INFO  - user input : 1
+2019-05-07 07:22:40 INFO  - saved Game Start...
+2019-05-07 07:22:40 INFO  - user input : 1
+2019-05-07 07:22:40 INFO  - user input : 5
+2019-05-07 07:22:40 INFO  - user input : 14
+2019-05-07 07:22:40 INFO  - user input : 9
+2019-05-07 07:22:40 INFO  - Enter Game Name Without space : 
+2019-05-07 07:22:40 INFO  - Game saved Successfully and Exit
+2019-05-07 07:22:40 INFO  - user input : 12
+2019-05-07 07:22:40 INFO  - user input : 13
+2019-05-07 07:22:40 INFO  - user input : 8
+2019-05-07 07:22:40 INFO  - What do you want to buy?
+2019-05-07 07:22:40 INFO  - 1. Energy Drink.
+2019-05-07 07:22:40 INFO  - 2. short Gun [Cost : 100 Gold]
+2019-05-07 07:22:40 INFO  - 3. big Gun [Cost : 200 Gold]
+2019-05-07 07:22:40 INFO  - 4. Don't want to Buy Anything.
+2019-05-07 07:22:40 INFO  - user input : 1
+2019-05-07 07:22:40 INFO  - How Many Drink you want to buy (50 gold per piece) : 
+2019-05-07 07:22:40 INFO  - user input : 1
+2019-05-07 07:22:40 INFO  - Purchased successfully.
+2019-05-07 07:22:40 INFO  - What do you want to buy?
+2019-05-07 07:22:40 INFO  - 1. Energy Drink.
+2019-05-07 07:22:40 INFO  - 2. short Gun [Cost : 100 Gold]
+2019-05-07 07:22:40 INFO  - 3. big Gun [Cost : 200 Gold]
+2019-05-07 07:22:40 INFO  - 4. Don't want to Buy Anything.
+2019-05-07 07:22:40 INFO  - user input : 3
+2019-05-07 07:22:40 INFO  - user input : 4
+2019-05-07 07:22:40 INFO  - user input : 2
+2019-05-07 07:22:40 INFO  - user input : 6
+2019-05-07 07:22:40 INFO  - What do you want to buy?
+2019-05-07 07:22:40 INFO  - 1. Energy Drink.
+2019-05-07 07:22:40 INFO  - 2. short Gun [Cost : 100 Gold]
+2019-05-07 07:22:40 INFO  - 3. big Gun [Cost : 200 Gold]
+2019-05-07 07:22:40 INFO  - 4. Don't want to Buy Anything.
+2019-05-07 07:22:40 INFO  - user input : 3
+2019-05-07 07:22:40 INFO  - What do you want to buy?
+2019-05-07 07:22:40 INFO  - 1. Energy Drink.
+2019-05-07 07:22:40 INFO  - 2. short Gun [Cost : 100 Gold]
+2019-05-07 07:22:40 INFO  - 3. big Gun [Cost : 200 Gold]
+2019-05-07 07:22:40 INFO  - 4. Don't want to Buy Anything.
+2019-05-07 07:22:40 INFO  - user input : 2
+2019-05-07 07:22:40 INFO  - user input : 15
+2019-05-07 07:22:40 INFO  - What do you want to buy?
+2019-05-07 07:22:40 INFO  - 1. Energy Drink.
+2019-05-07 07:22:40 INFO  - 2. short Gun [Cost : 100 Gold]
+2019-05-07 07:22:40 INFO  - 3. big Gun [Cost : 200 Gold]
+2019-05-07 07:22:40 INFO  - 4. Don't want to Buy Anything.
+2019-05-07 07:22:40 INFO  - user input : 2
+2019-05-07 07:22:40 INFO  - user input : 1

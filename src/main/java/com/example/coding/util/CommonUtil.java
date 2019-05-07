@@ -21,101 +21,92 @@ public class CommonUtil {
 	private PlayerActions playerActions;
 	
 	public  void printTitle(){
-		_log.info("[printTitle] START");
-				System.out.println(" ________  _________  ________  _______   _______  _________        ________ ___  ________  ___  ___  _________  _______   ________          ___  ___");
-				System.out.println("|\\   ____\\|\\___   ___|\\   __  \\|\\  ___ \\ |\\  ___ \\|\\___   ___\\     |\\  _____|\\  \\|\\   ____\\|\\  \\|\\  \\|\\___   ___|\\  ___ \\ |\\   __  \\        |\\  \\|\\  \\ ");
-				System.out.println("\\ \\  \\___|\\|___ \\  \\_\\ \\  \\|\\  \\ \\   __/|\\ \\   __/\\|___ \\  \\_|     \\ \\  \\__/\\ \\  \\ \\  \\___|\\ \\  \\\\\\  \\|___ \\  \\_\\ \\   __/|\\ \\  \\|\\  \\       \\ \\  \\ \\  \\  ");
-				System.out.println(" \\ \\_____  \\   \\ \\  \\ \\ \\   _  _\\ \\  \\_|/_\\ \\  \\_|/__  \\ \\  \\       \\ \\   __\\\\ \\  \\ \\  \\  __\\ \\   __  \\   \\ \\  \\ \\ \\  \\_|/_\\ \\   _  _\\       \\ \\  \\ \\  \\  ");
-				System.out.println("  \\|____|\\  \\   \\ \\  \\ \\ \\  \\\\  \\\\ \\  \\_|\\ \\ \\  \\_|\\ \\  \\ \\  \\       \\ \\  \\_| \\ \\  \\ \\  \\|\\  \\ \\  \\ \\  \\   \\ \\  \\ \\ \\  \\_|\\ \\ \\  \\\\  \\|       \\ \\  \\ \\  \\ ");
-				System.out.println("    ____\\_\\  \\   \\ \\__\\ \\ \\__\\\\ _\\\\ \\_______\\ \\_______\\  \\ \\__\\       \\ \\__\\   \\ \\__\\ \\_______\\ \\__\\ \\__\\   \\ \\__\\ \\ \\_______\\ \\__\\\\ _\\        \\ \\__\\ \\__\\");
-				System.out.println("   |\\_________\\   \\|__|  \\|__|\\|__|\\|_______|\\|_______|   \\|__|        \\|__|    \\|__|\\|_______|\\|__|\\|__|    \\|__|  \\|_______|\\|__|\\|__|        \\|__|\\|__|");
-				System.out.println("   \\|_________|                                                                                                                                           ");
-				printDashLine();		
-				System.out.println("WELCOME! GAME SELECTION...");		
-				System.out.println("1. Start a New Game\n2. Load Game");		
-				printDashLine();
-				System.out.println("(Select 1 or 2) : ");
-				_log.info("[printTitle] EXIT");
+		_log.info(" ________  _________  ________  _______   _______  _________        ________ ___  ________  ___  ___  _________  _______   ________          ___  ___");
+		_log.info("|\\   ____\\|\\___   ___|\\   __  \\|\\  ___ \\ |\\  ___ \\|\\___   ___\\     |\\  _____|\\  \\|\\   ____\\|\\  \\|\\  \\|\\___   ___|\\  ___ \\ |\\   __  \\        |\\  \\|\\  \\ ");
+		_log.info("\\ \\  \\___|\\|___ \\  \\_\\ \\  \\|\\  \\ \\   __/|\\ \\   __/\\|___ \\  \\_|     \\ \\  \\__/\\ \\  \\ \\  \\___|\\ \\  \\\\\\  \\|___ \\  \\_\\ \\   __/|\\ \\  \\|\\  \\       \\ \\  \\ \\  \\  ");
+		_log.info(" \\ \\_____  \\   \\ \\  \\ \\ \\   _  _\\ \\  \\_|/_\\ \\  \\_|/__  \\ \\  \\       \\ \\   __\\\\ \\  \\ \\  \\  __\\ \\   __  \\   \\ \\  \\ \\ \\  \\_|/_\\ \\   _  _\\       \\ \\  \\ \\  \\  ");
+		_log.info("  \\|____|\\  \\   \\ \\  \\ \\ \\  \\\\  \\\\ \\  \\_|\\ \\ \\  \\_|\\ \\  \\ \\  \\       \\ \\  \\_| \\ \\  \\ \\  \\|\\  \\ \\  \\ \\  \\   \\ \\  \\ \\ \\  \\_|\\ \\ \\  \\\\  \\|       \\ \\  \\ \\  \\ ");
+		_log.info("    ____\\_\\  \\   \\ \\__\\ \\ \\__\\\\ _\\\\ \\_______\\ \\_______\\  \\ \\__\\       \\ \\__\\   \\ \\__\\ \\_______\\ \\__\\ \\__\\   \\ \\__\\ \\ \\_______\\ \\__\\\\ _\\        \\ \\__\\ \\__\\");
+		_log.info("   |\\_________\\   \\|__|  \\|__|\\|__|\\|_______|\\|_______|   \\|__|        \\|__|    \\|__|\\|_______|\\|__|\\|__|    \\|__|  \\|_______|\\|__|\\|__|        \\|__|\\|__|");
+		_log.info("   \\|_________|                                                                                                                                           ");
+		printDashLine();		
+		_log.info("WELCOME! GAME SELECTION...");		
+		_log.info("1. Start a New Game\n2. Load Game");		
+		printDashLine();
+		_log.info("(Select 1 or 2) : ");
 	}
 	
 	public void printPlayersName(Player p1) {
-		_log.info("[printPlayersName] START , PLAYER 1 : "+p1.getpName().toUpperCase()+
-				", PLAYER 2 : "+p1.geteName().toUpperCase());
-		System.out
-				.println("=======================START FIGHT===============================");
-		System.out.println("***********************  "
+		_log.info("=======================START FIGHT===============================");
+		_log.info("***********************  "
 				+ p1.getpName().toUpperCase() + " vs "
 				+ p1.geteName().toUpperCase() + "  ******************");
 		printDashLine();
-		_log.info("[printPlayersName] EXIT");
 	}
 	
 	public void printPlayersDetail(Player p1) {
-		System.out.println(p1);
+		_log.info(p1);
 	}
 	
 	public void printActions(Player p1) {
-		_log.info("[printActions] START");
 		printDashLine();
-		System.out.println("Points :");
-		System.out
-				.println("[Punch = -5, Kick = -10, Explore = Buy Products, Energy = +50]");
+		_log.info("Points :");
+		_log.info("[Punch = -5, Kick = -10, Explore = Buy Products, Energy = +50]");
 		printDashLine();
-		System.out.println("What do you want to do ?");
-		System.out.println("1. Punch by P1");
-		System.out.println("2. Kick by P1");
-		System.out.println("3. Explore P1");
+		_log.info("What do you want to do ?");
+		_log.info("1. Punch by P1");
+		_log.info("2. Kick by P1");
+		_log.info("3. Explore P1");
 		if (p1.getpEnergyDrink() > 0) {
-			System.out.println("4. Boost Energy P1");
+			_log.info("4. Boost Energy P1");
 		}
-		System.out.println("5. Punch by P2");
-		System.out.println("6. Kick by P2");
-		System.out.println("7. Explore  P2");
+		_log.info("5. Punch by P2");
+		_log.info("6. Kick by P2");
+		_log.info("7. Explore  P2");
 		if (p1.geteEnergyDrink() > 0) {
-			System.out.println("8. Boost Energy P2");
+			_log.info("8. Boost Energy P2");
 		}
-		System.out.println("9. Save And Exit Game");
-		System.out.println("10. Open Saved Games");
-		System.out.println("11. Exit");
+		_log.info("9. Save And Exit Game");
+		_log.info("10. Open Saved Games");
+		_log.info("11. Exit");
 		if (p1.getpShortGun() == 1) {
-			System.out.println("12. Short Gun Fire p1");
+			_log.info("12. Short Gun Fire p1");
 		}
 		if (p1.getpBigGun() == 1) {
-			System.out.println("13. Big Gun Fire p1");
+			_log.info("13. Big Gun Fire p1");
 		}
 		if (p1.geteShortGun() == 1) {
-			System.out.println("14. Short Gun Fire p2");
+			_log.info("14. Short Gun Fire p2");
 		}
 		if (p1.geteBigGun() == 1) {
-			System.out.println("15. Big Gun Fire p2");
+			_log.info("15. Big Gun Fire p2");
 		}
-		_log.info("[printActions] START, PLAYER : "+p1);
 	}
 	
 	
 	
 	public boolean decideWinnerAndContinue(Player playerData, boolean isPlay) {
-		_log.info("[decideWinnerAndContinue] START , playerData : "+playerData);
 		if (playerData.getpHealth() <= 0 || playerData.geteHealth() <= 0) {
 			printDashLine();
 			if (playerData.geteHealth() < playerData.getpHealth()) {
-				System.out.println(playerData.getpName().toUpperCase()
+				_log.info(playerData.getpName().toUpperCase()
 						+ " IS WINNER.");
 				playerData.seteHealth(0);
 				playerData.setpGold(playerData.getpGold() + IConstants.Bonus.GOLD);
 			} else {
-				System.out.println(playerData.geteName().toUpperCase()
+				_log.info(playerData.geteName().toUpperCase()
 						+ " IS WINNER.");
 				playerData.setpHealth(0);
 				playerData.seteGold(playerData.geteGold() + IConstants.Bonus.GOLD);
 			}
-			System.out.println("GAME FINISHED.");
+			_log.info("GAME FINISHED.");
 			printDashLine();
-			System.out.println("Do you want to Continue The Game? ");
-			System.out.println("1. YES");
-			System.out.println("2. NO");
+			_log.info("Do you want to Continue The Game? ");
+			_log.info("1. YES");
+			_log.info("2. NO");
 			int value = scan.nextInt();
-			System.out.println("(Select 1 or 2)");
+			_log.info("(Select 1 or 2)");
+			_log.info("user input : "+value);
 			if (value == 1) {
 				while (isPlay) {
 					if (playerData.geteHealth() <= 0) {
@@ -132,27 +123,24 @@ public class CommonUtil {
 				System.exit(0);
 			}
 		}
-		_log.info("[decideWinnerAndContinue] EXIT ");
 		return isPlay;
 	}
 
 	
 	public void printDashLine(){
-		System.out.println("=================================================");
+		_log.info("=================================================");
 	}
 	
 	Scanner scan = new Scanner(System.in);
 	public List<String> getPlayerNames() {
-		_log.info("[getPlayerNames] START");
 		List<String> names = new ArrayList<>();
-		System.out.println("======***==Create Characters By Name===***=======");
-		System.out.println("Enter Player1 Name : ");
+		_log.info("======***==Create Characters By Name===***=======");
+		_log.info("Enter Player1 Name : ");
 		String name1 = scan.next();
 		names.add(name1);
-		System.out.println("Enter Player2 Name : ");
+		_log.info("Enter Player2 Name : ");
 		String name2 =scan.next();
 		names.add(name2);	
-		_log.info("[getPlayerNames] EXIT , names : "+names);
 		return names;
 	}
 	

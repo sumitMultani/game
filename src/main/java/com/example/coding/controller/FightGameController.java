@@ -20,7 +20,6 @@ public class FightGameController {
 	private FightGameService fightGameService;
 
 	public String startGame(int startPoint) {
-		_log.info("[startGame] userInput : "+startPoint);
 		String response = IConstants.Response.SUCCESS;
 		boolean isStartSucess = false;
 		boolean isLoadSucess = false;
@@ -35,7 +34,7 @@ public class FightGameController {
 		}catch(Exception ex){
 			_log.error("[startGame] Exception : "+ex.getMessage());
 			response = IConstants.Response.FAIL;
-			System.out.println("Run Again...");
+			_log.info("[startGame] Run Again..");
 		}
 		return response;
 	}

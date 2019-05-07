@@ -20,24 +20,23 @@ import com.example.coding.util.IConstants;
 	private FightGameService fightGameService;
 
 	public String startGame(int startPoint) {
-<span class="fc" id="L23">		_log.info(&quot;[startGame] userInput : &quot;+startPoint);</span>
-<span class="fc" id="L24">		String response = IConstants.Response.SUCCESS;</span>
-<span class="fc" id="L25">		boolean isStartSucess = false;</span>
-<span class="fc" id="L26">		boolean isLoadSucess = false;</span>
+<span class="fc" id="L23">		String response = IConstants.Response.SUCCESS;</span>
+<span class="fc" id="L24">		boolean isStartSucess = false;</span>
+<span class="fc" id="L25">		boolean isLoadSucess = false;</span>
 		try{
-<span class="fc bfc" id="L28" title="All 2 branches covered.">			if (startPoint == 1) {</span>
-<span class="fc" id="L29">				  isStartSucess = fightGameService.startNewGame();</span>
-<span class="fc bfc" id="L30" title="All 2 branches covered.">			} else if (startPoint == 2) {</span>
-<span class="fc" id="L31">				  isLoadSucess = fightGameService.loadGame();</span>
-<span class="pc bpc" id="L32" title="3 of 6 branches missed.">			} else if (!isStartSucess &amp;&amp; !isLoadSucess &amp;&amp; startPoint &gt; 2) {</span>
-<span class="fc" id="L33">				throw new InvalidAttributesException();</span>
+<span class="fc bfc" id="L27" title="All 2 branches covered.">			if (startPoint == 1) {</span>
+<span class="fc" id="L28">				  isStartSucess = fightGameService.startNewGame();</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">			} else if (startPoint == 2) {</span>
+<span class="fc" id="L30">				  isLoadSucess = fightGameService.loadGame();</span>
+<span class="pc bpc" id="L31" title="3 of 6 branches missed.">			} else if (!isStartSucess &amp;&amp; !isLoadSucess &amp;&amp; startPoint &gt; 2) {</span>
+<span class="fc" id="L32">				throw new InvalidAttributesException();</span>
 			}
-<span class="fc" id="L35">		}catch(Exception ex){</span>
-<span class="fc" id="L36">			_log.error(&quot;[startGame] Exception : &quot;+ex.getMessage());</span>
-<span class="fc" id="L37">			response = IConstants.Response.FAIL;</span>
-<span class="fc" id="L38">			System.out.println(&quot;Run Again...&quot;);</span>
-<span class="fc" id="L39">		}</span>
-<span class="fc" id="L40">		return response;</span>
+<span class="fc" id="L34">		}catch(Exception ex){</span>
+<span class="fc" id="L35">			_log.error(&quot;[startGame] Exception : &quot;+ex.getMessage());</span>
+<span class="fc" id="L36">			response = IConstants.Response.FAIL;</span>
+<span class="fc" id="L37">			_log.info(&quot;[startGame] Run Again..&quot;);</span>
+<span class="fc" id="L38">		}</span>
+<span class="fc" id="L39">		return response;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.0.201801022044</span></div></body></html>
