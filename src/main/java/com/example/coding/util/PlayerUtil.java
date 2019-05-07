@@ -13,9 +13,9 @@ import org.springframework.stereotype.Component;
 import com.example.coding.model.Player;
 
 @Component
-public class CommonUtil {
+public class PlayerUtil {
 
-	private static Logger _log = Logger.getLogger(CommonUtil.class);
+	private static Logger _log = Logger.getLogger(PlayerUtil.class);
 	
 	@Autowired
 	private PlayerActions playerActions;

@@ -28,7 +28,7 @@ public class PlayerActionsTest {
 	private PlayerActions playerActions;
 	
 	@Mock
-	private CommonUtil commonUtil;
+	private PlayerUtil commonUtil;
 	
 	@Mock
 	private Scanner scan;

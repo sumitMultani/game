@@ -18,7 +18,7 @@ public class PlayerActions {
 	private static Logger _log = Logger.getLogger(PlayerActions.class);
 	
 	@Autowired
-	private CommonUtil commonUtil;
+	private PlayerUtil commonUtil;
 	
 	Scanner scan = new Scanner(System.in);
 	

@@ -25,7 +25,7 @@ import com.example.coding.service.FightGameService;
 public class CommonUtilTest {
 
 	@InjectMocks
-	private CommonUtil commonUtil;
+	private PlayerUtil commonUtil;
 	
 	@Mock
 	private Scanner scan;

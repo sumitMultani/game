@@ -17,7 +17,7 @@ import com.example.coding.controller.FightGameController;
 import com.example.coding.main.Application;
 import com.example.coding.model.Player;
 import com.example.coding.service.impl.FightGameServiceImpl;
-import com.example.coding.util.CommonUtil;
+import com.example.coding.util.PlayerUtil;
 import com.example.coding.util.IConstants;
 import com.example.coding.util.PlayerActions;
 
@@ -30,7 +30,7 @@ public class FightGameServiceTest {
 	private FightGameServiceImpl fightGameService;
    
 	@Mock
-	private CommonUtil commonUtil;
+	private PlayerUtil commonUtil;
 	
 	@Mock
 	private PlayerActions playerActions;
