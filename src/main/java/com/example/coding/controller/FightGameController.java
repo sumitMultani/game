@@ -32,9 +32,7 @@ public class FightGameController {
 				throw new InvalidAttributesException();
 			}
 		}catch(Exception ex){
-			_log.error("[startGame] Exception : "+ex.getMessage());
 			response = IConstants.Response.FAIL;
-			_log.info("[startGame] Run Again..");
 		}
 		return response;
 	}

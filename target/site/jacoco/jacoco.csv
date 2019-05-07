@@ -3,11 +3,11 @@ fightGame,com.example.coding.util,IConstants.Bonus,0,4,0,0,0,1,0,1,0,1
 fightGame,com.example.coding.util,IConstants.Price,0,10,0,0,0,3,0,1,0,1
 fightGame,com.example.coding.util,IConstants.Attack,0,13,0,0,0,4,0,1,0,1
 fightGame,com.example.coding.util,PlayerActions,89,713,26,76,25,144,26,37,1,11
-fightGame,com.example.coding.util,CommonUtil,51,322,13,15,16,84,12,12,1,9
+fightGame,com.example.coding.util,CommonUtil,52,322,13,15,16,84,12,12,1,9
 fightGame,com.example.coding.util,IConstants.Default,0,16,0,0,0,5,0,1,0,1
 fightGame,com.example.coding.util,ReadWrite,11,172,1,7,5,34,2,6,1,3
 fightGame,com.example.coding.util,IConstants.BoostEnergy,0,4,0,0,0,1,0,1,0,1
 fightGame,com.example.coding.service.impl,FightGameServiceImpl,3,87,0,2,2,20,0,5,0,4
-fightGame,com.example.coding.controller,FightGameController,0,60,3,7,0,17,3,5,0,3
+fightGame,com.example.coding.controller,FightGameController,0,46,3,7,0,15,3,5,0,3
 fightGame,com.example.coding.main,Application,51,0,2,0,13,0,4,0,3,0
 fightGame,com.example.coding.model,Player,0,201,0,0,0,57,0,29,0,29

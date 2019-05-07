@@ -150,7 +150,7 @@ public class CommonUtil {
 			File file = new ClassPathResource(fileName).getFile();
 			path = file.getPath();
 		}catch(Exception e){
-			System.out.println(e);
+			_log.error(e.getMessage());
 		}
 		return path;
 	}
