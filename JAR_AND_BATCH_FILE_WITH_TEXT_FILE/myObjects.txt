@@ -1,3 +1,0 @@
-{ "pName" : "sumit" ,"pHealth" : 100 ,"pGold" : 1000,"pEnergyDrink" : 5 ,"pShortGun" : 0 ,"pBigGun" : 0,"eName" : "UV" ,"eHealth" : 95 ,"eGold" : 1000,"eEnergyDrink" : 5 ,"eShortGun" : 0 ,"eBigGun" : 0,"gameName" : "newGame"}
- 
-{ "pName" : "sumit" ,"pHealth" : 100 ,"pGold" : 1000,"pEnergyDrink" : 5 ,"pShortGun" : 0 ,"pBigGun" : 0,"eName" : "UV" ,"eHealth" : 80 ,"eGold" : 1000,"eEnergyDrink" : 5 ,"eShortGun" : 0 ,"eBigGun" : 0,"gameName" : "wer"}
