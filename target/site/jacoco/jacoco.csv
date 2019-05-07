@@ -3,7 +3,7 @@ fightGame,com.example.coding.util,IConstants.Bonus,0,4,0,0,0,1,0,1,0,1
 fightGame,com.example.coding.util,IConstants.Price,0,10,0,0,0,3,0,1,0,1
 fightGame,com.example.coding.util,IConstants.Attack,0,13,0,0,0,4,0,1,0,1
 fightGame,com.example.coding.util,PlayerUtil,52,322,13,15,16,84,12,12,1,9
-fightGame,com.example.coding.util,PlayerActions,94,716,29,77,25,145,28,37,1,11
+fightGame,com.example.coding.util,PlayerActions,89,721,27,79,25,145,27,38,1,11
 fightGame,com.example.coding.util,IConstants.Default,0,16,0,0,0,5,0,1,0,1
 fightGame,com.example.coding.util,ReadWrite,13,176,1,7,5,35,2,7,1,4
 fightGame,com.example.coding.util,IConstants.BoostEnergy,0,4,0,0,0,1,0,1,0,1
