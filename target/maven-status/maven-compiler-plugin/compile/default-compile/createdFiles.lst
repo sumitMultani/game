@@ -1,7 +1,7 @@
 com\example\coding\controller\FightGameController.class
 com\example\coding\util\IConstants.class
 com\example\coding\util\ReadWrite.class
-com\example\coding\util\CommonUtil.class
+com\example\coding\util\IConstants$File.class
 com\example\coding\service\impl\FightGameServiceImpl.class
 com\example\coding\util\IConstants$Default.class
 com\example\coding\util\PlayerActions.class
@@ -11,5 +11,6 @@ com\example\coding\util\IConstants$Response.class
 com\example\coding\model\Player.class
 com\example\coding\util\IConstants$Price.class
 com\example\coding\service\FightGameService.class
+com\example\coding\util\PlayerUtil.class
 com\example\coding\main\Application.class
 com\example\coding\util\IConstants$Attack.class

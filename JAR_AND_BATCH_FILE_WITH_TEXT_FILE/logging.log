@@ -1,0 +1,60 @@
+2019-05-07 07:59:09 ERROR - class path resource [log4j.properties] cannot be resolved to absolute file path because it does not reside in the file system: jar:file:/D:/My%20Folder/games/game/JAR_AND_BATCH_FILE_WITH_TEXT_FILE/fightGame-1.0.0.jar!/BOOT-INF/classes!/log4j.properties
+2019-05-07 07:59:13 INFO  -  ________  _________  ________  _______   _______  _________        ________ ___  ________  ___  ___  _________  _______   ________          ___  ___
+2019-05-07 07:59:13 INFO  - |\   ____\|\___   ___|\   __  \|\  ___ \ |\  ___ \|\___   ___\     |\  _____|\  \|\   ____\|\  \|\  \|\___   ___|\  ___ \ |\   __  \        |\  \|\  \ 
+2019-05-07 07:59:13 INFO  - \ \  \___|\|___ \  \_\ \  \|\  \ \   __/|\ \   __/\|___ \  \_|     \ \  \__/\ \  \ \  \___|\ \  \\\  \|___ \  \_\ \   __/|\ \  \|\  \       \ \  \ \  \  
+2019-05-07 07:59:13 INFO  -  \ \_____  \   \ \  \ \ \   _  _\ \  \_|/_\ \  \_|/__  \ \  \       \ \   __\\ \  \ \  \  __\ \   __  \   \ \  \ \ \  \_|/_\ \   _  _\       \ \  \ \  \  
+2019-05-07 07:59:13 INFO  -   \|____|\  \   \ \  \ \ \  \\  \\ \  \_|\ \ \  \_|\ \  \ \  \       \ \  \_| \ \  \ \  \|\  \ \  \ \  \   \ \  \ \ \  \_|\ \ \  \\  \|       \ \  \ \  \ 
+2019-05-07 07:59:13 INFO  -     ____\_\  \   \ \__\ \ \__\\ _\\ \_______\ \_______\  \ \__\       \ \__\   \ \__\ \_______\ \__\ \__\   \ \__\ \ \_______\ \__\\ _\        \ \__\ \__\
+2019-05-07 07:59:13 INFO  -    |\_________\   \|__|  \|__|\|__|\|_______|\|_______|   \|__|        \|__|    \|__|\|_______|\|__|\|__|    \|__|  \|_______|\|__|\|__|        \|__|\|__|
+2019-05-07 07:59:13 INFO  -    \|_________|                                                                                                                                           
+2019-05-07 07:59:13 INFO  - =================================================
+2019-05-07 07:59:13 INFO  - WELCOME! GAME SELECTION...
+2019-05-07 07:59:13 INFO  - 1. Start a New Game
+2. Load Game
+2019-05-07 07:59:13 INFO  - =================================================
+2019-05-07 07:59:13 INFO  - (Select 1 or 2) : 
+2019-05-07 07:59:18 INFO  - Select Number to Load Game : 
+2019-05-07 07:59:18 INFO  - 1 : newGame
+2019-05-07 07:59:26 INFO  - user input : 1
+2019-05-07 07:59:26 INFO  - saved Game Start...
+2019-05-07 07:59:26 INFO  - Players Detail: 
+ 1.Name P1 : sumit, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : UV, Health P2 : 95, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0
+2019-05-07 07:59:26 INFO  - =================================================
+2019-05-07 07:59:26 INFO  - Points :
+2019-05-07 07:59:26 INFO  - [Punch = -5, Kick = -10, Explore = Buy Products, Energy = +50]
+2019-05-07 07:59:26 INFO  - =================================================
+2019-05-07 07:59:26 INFO  - What do you want to do ?
+2019-05-07 07:59:26 INFO  - 1. Punch by P1
+2019-05-07 07:59:26 INFO  - 2. Kick by P1
+2019-05-07 07:59:26 INFO  - 3. Explore P1
+2019-05-07 07:59:26 INFO  - 4. Boost Energy P1
+2019-05-07 07:59:26 INFO  - 5. Punch by P2
+2019-05-07 07:59:26 INFO  - 6. Kick by P2
+2019-05-07 07:59:26 INFO  - 7. Explore  P2
+2019-05-07 07:59:26 INFO  - 8. Boost Energy P2
+2019-05-07 07:59:26 INFO  - 9. Save And Exit Game
+2019-05-07 07:59:26 INFO  - 10. Open Saved Games
+2019-05-07 07:59:26 INFO  - 11. Exit
+2019-05-07 07:59:30 INFO  - user input : 2
+2019-05-07 07:59:30 INFO  - Players Detail: 
+ 1.Name P1 : sumit, Health P1 : 100, Gold P1 : 1000, EnergyDrink P1 : 5, ShortGun P1 : 0, BigGun P1 : 0 
+ 2.Name P2 : UV, Health P2 : 85, Gold P2 : 1000, EnergyDrink P2 : 5, ShortGun P2 : 0, BigGun P2 : 0
+2019-05-07 07:59:30 INFO  - =================================================
+2019-05-07 07:59:30 INFO  - Points :
+2019-05-07 07:59:30 INFO  - [Punch = -5, Kick = -10, Explore = Buy Products, Energy = +50]
+2019-05-07 07:59:30 INFO  - =================================================
+2019-05-07 07:59:30 INFO  - What do you want to do ?
+2019-05-07 07:59:30 INFO  - 1. Punch by P1
+2019-05-07 07:59:30 INFO  - 2. Kick by P1
+2019-05-07 07:59:30 INFO  - 3. Explore P1
+2019-05-07 07:59:30 INFO  - 4. Boost Energy P1
+2019-05-07 07:59:30 INFO  - 5. Punch by P2
+2019-05-07 07:59:30 INFO  - 6. Kick by P2
+2019-05-07 07:59:30 INFO  - 7. Explore  P2
+2019-05-07 07:59:30 INFO  - 8. Boost Energy P2
+2019-05-07 07:59:30 INFO  - 9. Save And Exit Game
+2019-05-07 07:59:30 INFO  - 10. Open Saved Games
+2019-05-07 07:59:30 INFO  - 11. Exit
+2019-05-07 07:59:36 INFO  - user input : 11
+2019-05-07 07:59:36 INFO  - EXIT SUCCESSFULLY.

@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import com.example.coding.controller.FightGameController;
-import com.example.coding.util.CommonUtil;
+import com.example.coding.util.PlayerUtil;
 import com.example.coding.util.IConstants;
 
 @SpringBootApplication
@@ -22,10 +22,10 @@ import com.example.coding.util.IConstants;
 @EnableScheduling
 <span class="nc" id="L23">public class Application {</span>
 
-<span class="nc" id="L25">	private static CommonUtil commonUtil = new CommonUtil();</span>
+<span class="nc" id="L25">	private static PlayerUtil commonUtil = new PlayerUtil();</span>
 
 	public static void main(String[] args) {
-<span class="nc" id="L28">		PropertyConfigurator.configure(CommonUtil.getFilePath(&quot;log4j.properties&quot;));</span>
+<span class="nc" id="L28">		PropertyConfigurator.configure(PlayerUtil.getFilePath(IConstants.File.NAME_LOG4J));</span>
 <span class="nc" id="L29">		ConfigurableApplicationContext context = new SpringApplicationBuilder(</span>
 <span class="nc" id="L30">				Application.class).headless(false).run(args);</span>
 <span class="nc" id="L31">		FightGameController game = context.getBean(FightGameController.class);</span>
